@@ -1,314 +1,707 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Буренка от Solomona — фермерская молочная продукция</title>
-    <meta name="description" content="Фермерские сыры, молоко, творог и йогурты из Хакасии и Минусинска. Наши магазины, продукция и предложения для бизнеса.">
-    <link rel="stylesheet" href="../site/css/style.css">
+    <meta
+      name="description"
+      content="Фермерские сыры, молоко, творог и йогурты из Хакасии и Минусинска. Наши магазины, продукция и предложения для бизнеса."
+    />
+    <link rel="stylesheet" href="../site/css/style.css" />
     <script src="../site/scripts/main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Общие SVG-иконки. Ниже используем их через <use href="#icon-...">. -->
-    <svg class="svg-icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <symbol id="icon-arrow" viewBox="0 0 24 24">
-            <path d="M4 12h16m-6-6 6 6-6 6"/>
-        </symbol>
-        <symbol id="icon-pin" viewBox="0 0 24 24">
-            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>
-        </symbol>
-        <symbol id="icon-leaf" viewBox="0 0 24 24">
-            <path d="M20 3C7 3 2 9 5 16c7 4 15-2 15-13ZM3 22 16 9"/>
-        </symbol>
-        <symbol id="icon-farmer" viewBox="0 0 24 24">
-            <path d="M3 8h18M7 8l2-5h6l2 5M8 11a4 4 0 0 0 8 0M4 22v-3a6 6 0 0 1 6-4h4a6 6 0 0 1 6 4v3M9 16v6m6-6v6"/>
-        </symbol>
-        <symbol id="icon-truck" viewBox="0 0 24 24">
-            <path d="M2 4h12v13H2ZM14 9h4l4 5v3h-8"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/>
-        </symbol>
-        <symbol id="icon-shop" viewBox="0 0 24 24">
-            <path d="M3 10v11h18V10M2 10l2-7h16l2 7M2 10c2 3 4 3 6 0 2 3 6 3 8 0 2 3 4 3 6 0M9 21v-7h6v7"/>
-        </symbol>
-        <symbol id="icon-heart" viewBox="0 0 24 24">
-            <path d="M12 21S2 15 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 7-10 13-10 13Z"/>
-        </symbol>
-        <symbol id="icon-people" viewBox="0 0 24 24">
-            <circle cx="12" cy="6" r="3"/><circle cx="4" cy="9" r="2"/><circle cx="20" cy="9" r="2"/>
-            <path d="M7 21v-4a5 5 0 0 1 10 0v4ZM1 20v-3a3 3 0 0 1 4-3m18 6v-3a3 3 0 0 0-4-3"/>
-        </symbol>
-        <symbol id="icon-mountain" viewBox="0 0 24 24">
-            <path d="m2 20 8-15 5 9 3-5 4 11ZM7 11l3 2 3-2"/>
-        </symbol>
-        <symbol id="icon-percent" viewBox="0 0 24 24">
-            <path d="m5 20 14-16"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/>
-        </symbol>
-        <symbol id="icon-document" viewBox="0 0 24 24">
-            <path d="M5 2h9l5 5v15H5ZM14 2v6h5M8 12h8m-8 4h8"/>
-        </symbol>
-        <symbol id="icon-handshake" viewBox="0 0 24 24">
-            <path d="m2 10 4-6 5 2 3-2 8 6-4 8-5 3-7-4ZM6 4l-4 6 4 7m16-7-4 8M11 6l-4 5 3 2 4-4 6 5m-7 1 4 3m-7 0 3 3"/>
-        </symbol>
-        <symbol id="icon-phone" viewBox="0 0 24 24">
-            <path d="m4 3 4-1 3 6-3 2c1 3 3 5 6 6l2-3 6 3-1 4c-1 5-8 1-12-3S0 4 4 3Z"/>
-        </symbol>
-        <symbol id="icon-chat" viewBox="0 0 24 24">
-            <path d="M21 11a9 9 0 0 1-9 9H4l-3 3 1-9a9 9 0 1 1 19-3Z"/><path d="M7 9h10M7 13h7"/>
-        </symbol>
+    <svg
+      class="svg-icons"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h16m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="icon-leaf" viewBox="0 0 24 24">
+        <path d="M20 3C7 3 2 9 5 16c7 4 15-2 15-13ZM3 22 16 9" />
+      </symbol>
+      <symbol id="icon-farmer" viewBox="0 0 24 24">
+        <path
+          d="M3 8h18M7 8l2-5h6l2 5M8 11a4 4 0 0 0 8 0M4 22v-3a6 6 0 0 1 6-4h4a6 6 0 0 1 6 4v3M9 16v6m6-6v6"
+        />
+      </symbol>
+      <symbol id="icon-truck" viewBox="0 0 24 24">
+        <path d="M2 4h12v13H2ZM14 9h4l4 5v3h-8" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="18" r="3" />
+      </symbol>
+      <symbol id="icon-shop" viewBox="0 0 24 24">
+        <path
+          d="M3 10v11h18V10M2 10l2-7h16l2 7M2 10c2 3 4 3 6 0 2 3 6 3 8 0 2 3 4 3 6 0M9 21v-7h6v7"
+        />
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path
+          d="M12 21S2 15 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 7-10 13-10 13Z"
+        />
+      </symbol>
+      <symbol id="icon-people" viewBox="0 0 24 24">
+        <circle cx="12" cy="6" r="3" />
+        <circle cx="4" cy="9" r="2" />
+        <circle cx="20" cy="9" r="2" />
+        <path
+          d="M7 21v-4a5 5 0 0 1 10 0v4ZM1 20v-3a3 3 0 0 1 4-3m18 6v-3a3 3 0 0 0-4-3"
+        />
+      </symbol>
+      <symbol id="icon-mountain" viewBox="0 0 24 24">
+        <path d="m2 20 8-15 5 9 3-5 4 11ZM7 11l3 2 3-2" />
+      </symbol>
+      <symbol id="icon-percent" viewBox="0 0 24 24">
+        <path d="m5 20 14-16" />
+        <circle cx="6" cy="6" r="3" />
+        <circle cx="18" cy="18" r="3" />
+      </symbol>
+      <symbol id="icon-document" viewBox="0 0 24 24">
+        <path d="M5 2h9l5 5v15H5ZM14 2v6h5M8 12h8m-8 4h8" />
+      </symbol>
+      <symbol id="icon-handshake" viewBox="0 0 24 24">
+        <path
+          d="m2 10 4-6 5 2 3-2 8 6-4 8-5 3-7-4ZM6 4l-4 6 4 7m16-7-4 8M11 6l-4 5 3 2 4-4 6 5m-7 1 4 3m-7 0 3 3"
+        />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path
+          d="m4 3 4-1 3 6-3 2c1 3 3 5 6 6l2-3 6 3-1 4c-1 5-8 1-12-3S0 4 4 3Z"
+        />
+      </symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24">
+        <path d="M21 11a9 9 0 0 1-9 9H4l-3 3 1-9a9 9 0 1 1 19-3Z" />
+        <path d="M7 9h10M7 13h7" />
+      </symbol>
     </svg>
 
     <!-- Шапка -->
     <header class="header">
-        <div class="container header__inner">
-            <a class="header__logo" href="index.html" aria-label="Буренка от Solomona — главная">
-                <img src="../site/img/logo.png" alt="Буренка от Solomona" width="100" height="100" class="header__logo-image">
-            </a>
+      <div class="container header__inner">
+        <a
+          class="header__logo"
+          href="index.html"
+          aria-label="Буренка от Solomona — главная"
+        >
+          <img
+            src="../site/img/logo.png"
+            alt="Буренка от Solomona"
+            width="100"
+            height="100"
+            class="header__logo-image"
+          />
+        </a>
 
-            <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
-                <span class="menu-toggle__line"></span><span class="menu-toggle__line"></span><span class="menu-toggle__line"></span>
-                <span class="visually-hidden menu-toggle__label">Открыть меню</span>
-            </button>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <span class="menu-toggle__line"></span
+          ><span class="menu-toggle__line"></span
+          ><span class="menu-toggle__line"></span>
+          <span class="visually-hidden menu-toggle__label">Открыть меню</span>
+        </button>
 
-            <nav class="navigation" id="main-nav" aria-label="Основное меню">
-                <a href="catalog.html" class="navigation__link">Каталог</a>
-                <a href="#stores" class="navigation__link">Магазины</a>
-                <a href="#about" class="navigation__link">О продукции</a>
-                <a href="company.html" class="navigation__link">Производители</a>
-                <a href="#sales" class="navigation__link">Акции</a>
-                <a href="#business" class="navigation__link">Для бизнеса</a>
-                <a href="#contacts" class="navigation__link">Контакты</a>
-            </nav>
+        <nav class="navigation" id="main-nav" aria-label="Основное меню">
+          <a href="catalog.html" class="navigation__link">Каталог</a>
+          <a href="#stores" class="navigation__link">Магазины</a>
+          <a href="#about" class="navigation__link">О продукции</a>
+          <a href="company.html" class="navigation__link">Производители</a>
+          <a href="#sales" class="navigation__link">Акции</a>
+          <a href="#business" class="navigation__link">Для бизнеса</a>
+          <a href="#contacts" class="navigation__link">Контакты</a>
+        </nav>
 
-            <a class="button header__button" href="#stores">
-                <svg class="icon"><use href="#icon-pin"/></svg>
-                Найти магазин
-            </a>
-        </div>
+        <a class="button header__button" href="#stores">
+          <svg class="icon"><use href="#icon-pin" /></svg>
+          Найти магазин
+        </a>
+      </div>
     </header>
 
     <main>
-        <!-- Главный экран -->
-        <section class="hero">
-            <div class="container hero__inner">
-                <div class="hero__content">
-                    <h1 class="hero__title">Фермерская<br>молочная продукция</h1>
-                    <p class="hero__subtitle">из Хакасии и Минусинска</p>
-                    <p class="hero__description">Натуральные сыры, молоко, творог, йогурты<br class="hero__break"> и другие молочные продукты от проверенных производителей.</p>
-                    <div class="hero__buttons">
-                        <a class="button" href="catalog.html">Перейти в каталог <svg class="icon"><use href="#icon-arrow"/></svg></a>
-                        <a class="button button--outline" href="#stores"><svg class="icon"><use href="#icon-pin"/></svg> Наши магазины</a>
-                    </div>
-                    <p class="handwritten hero__note">Настоящий вкус<br>родного края ♡</p>
-                </div>
+      <!-- Главный экран -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">Фермерская<br />молочная продукция</h1>
+            <p class="hero__subtitle">из Хакасии и Минусинска</p>
+            <p class="hero__description">
+              Натуральные сыры, молоко, творог, йогурты<br
+                class="hero__break"
+              />
+              и другие молочные продукты от проверенных производителей.
+            </p>
+            <div class="hero__buttons">
+              <a class="button" href="catalog.html"
+                >Перейти в каталог
+                <svg class="icon"><use href="#icon-arrow" /></svg
+              ></a>
+              <a class="button button--outline" href="#stores"
+                ><svg class="icon"><use href="#icon-pin" /></svg> Наши
+                магазины</a
+              >
             </div>
-        </section>
-
-        <!-- Преимущества -->
-        <div class="container">
-            <div class="advantages">
-                <div class="advantages__item">
-                    <svg class="icon advantages__icon"><use href="#icon-leaf"/></svg>
-                    <div><h3 class="advantages__title">Натуральный состав</h3><p class="advantages__text">Без искусственных добавок</p></div>
-                </div>
-                <div class="advantages__item">
-                    <svg class="icon advantages__icon"><use href="#icon-farmer"/></svg>
-                    <div><h3 class="advantages__title">Проверенные производители</h3><p class="advantages__text">Фермеры Хакасии и Минусинска</p></div>
-                </div>
-                <div class="advantages__item">
-                    <svg class="icon advantages__icon"><use href="#icon-truck"/></svg>
-                    <div><h3 class="advantages__title">Свежая поставка</h3><p class="advantages__text">Регулярное пополнение</p></div>
-                </div>
-                <div class="advantages__item">
-                    <svg class="icon advantages__icon"><use href="#icon-shop"/></svg>
-                    <div><h3 class="advantages__title">7 торговых точек</h3><p class="advantages__text">Удобно рядом с вами</p></div>
-                </div>
-            </div>
+            <p class="handwritten hero__note">
+              Настоящий вкус<br />родного края ♡
+            </p>
+          </div>
         </div>
+      </section>
 
-        <!-- Каталог категорий -->
-        <section class="section catalog" id="catalog">
-            <div class="container">
-                <div class="section-heading">
-                    <h2 class="section-heading__title">Каталог продукции</h2>
-                    <a class="text-link" href="catalog.html">Весь каталог <svg class="icon"><use href="#icon-arrow"/></svg></a>
-                </div>
-
-                <div class="categories">
-                    <a class="category-card" href="catalog.html?category=cheese">
-                        <img src="../site/img/cheese.png" alt="Фермерские сыры" loading="lazy" width="1254" height="1254" class="category-card__image">
-                        <div class="category-card__caption"><h3 class="category-card__title">Сыры</h3><span class="round-arrow"><svg class="icon"><use href="#icon-arrow"/></svg></span></div>
-                    </a>
-                    <a class="category-card" href="catalog.html?category=milk">
-                        <img src="../site/img/milk.png" alt="Молоко в стеклянных бутылках" loading="lazy" width="1254" height="1254" class="category-card__image">
-                        <div class="category-card__caption"><h3 class="category-card__title">Молоко</h3><span class="round-arrow"><svg class="icon"><use href="#icon-arrow"/></svg></span></div>
-                    </a>
-                    <a class="category-card" href="catalog.html?category=curd">
-                        <img src="../site/img/curd.png" alt="Творог в деревянной миске" loading="lazy" width="1254" height="1254" class="category-card__image">
-                        <div class="category-card__caption"><h3 class="category-card__title">Творог</h3><span class="round-arrow"><svg class="icon"><use href="#icon-arrow"/></svg></span></div>
-                    </a>
-                    <a class="category-card" href="catalog.html?category=sour-cream">
-                        <img src="../site/img/sour-cream.png" alt="Густая фермерская сметана" loading="lazy" width="1254" height="1254" class="category-card__image">
-                        <div class="category-card__caption"><h3 class="category-card__title">Сметана</h3><span class="round-arrow"><svg class="icon"><use href="#icon-arrow"/></svg></span></div>
-                    </a>
-                    <a class="category-card" href="catalog.html?category=yogurt">
-                        <img src="../site/img/yogurt.png" alt="Йогурты с ягодами" loading="lazy" width="1254" height="1254" class="category-card__image">
-                        <div class="category-card__caption"><h3 class="category-card__title">Йогурты</h3><span class="round-arrow"><svg class="icon"><use href="#icon-arrow"/></svg></span></div>
-                    </a>
-                    <a class="category-card" href="catalog.html?category=butter">
-                        <img src="../site/img/butter.png" alt="Фермерское сливочное масло" loading="lazy" width="1254" height="1254" class="category-card__image">
-                        <div class="category-card__caption"><h3 class="category-card__title">Масло</h3><span class="round-arrow"><svg class="icon"><use href="#icon-arrow"/></svg></span></div>
-                    </a>
-                </div>
+      <!-- Преимущества -->
+      <div class="container">
+        <div class="advantages">
+          <div class="advantages__item">
+            <svg class="icon advantages__icon"><use href="#icon-leaf" /></svg>
+            <div>
+              <h3 class="advantages__title">Натуральный состав</h3>
+              <p class="advantages__text">Без искусственных добавок</p>
             </div>
-        </section>
-
-        <!-- Происхождение продукции -->
-        <section class="about" id="about">
-            <div class="container about__inner">
-                <div class="about__farm">
-                    <img src="../site/img/farm.png" alt="Молоко и сыр на фоне пастбища" loading="lazy" width="1254" height="1254" class="about__farm-image">
-                    <p class="handwritten about__note">Чистая природа Хакасии —<br>натуральные продукты ♡</p>
-                </div>
-
-                <div class="about__content">
-                    <h2 class="about__title">Откуда эта продукция?</h2>
-                    <p class="about__description">Мы сотрудничаем с фермерскими хозяйствами Хакасии и Минусинска, которые создают по-настоящему натуральные и качественные молочные продукты.</p>
-                    <div class="about__features">
-                        <div class="feature">
-                            <span class="feature__icon"><svg class="icon feature__symbol"><use href="#icon-leaf"/></svg></span>
-                            <h3 class="feature__title">Натуральные рецепты</h3><p class="feature__text">Без заменителей и консервантов</p>
-                        </div>
-                        <div class="feature">
-                            <span class="feature__icon"><svg class="icon feature__symbol"><use href="#icon-mountain"/></svg></span>
-                            <h3 class="feature__title">Местные производители</h3><p class="feature__text">Хакасия и Минусинский район</p>
-                        </div>
-                        <div class="feature">
-                            <span class="feature__icon"><svg class="icon feature__symbol"><use href="#icon-heart"/></svg></span>
-                            <h3 class="feature__title">Настоящий вкус</h3><p class="feature__text">Традиционные технологии и забота о качестве</p>
-                        </div>
-                        <div class="feature">
-                            <span class="feature__icon"><svg class="icon feature__symbol"><use href="#icon-people"/></svg></span>
-                            <h3 class="feature__title">Поддерживаем фермеров</h3><p class="feature__text">Развиваем региональное производство</p>
-                        </div>
-                    </div>
-                </div>
-
-                <figure class="about__pouring">
-                    <img src="../site/img/pouring.png" alt="Фермер переливает свежее молоко" loading="lazy" width="1086" height="1448" class="about__pouring-image">
-                    <figcaption class="handwritten about__caption">От наших фермеров<br>к вашему столу ♡</figcaption>
-                </figure>
+          </div>
+          <div class="advantages__item">
+            <svg class="icon advantages__icon"><use href="#icon-farmer" /></svg>
+            <div>
+              <h3 class="advantages__title">Проверенные производители</h3>
+              <p class="advantages__text">Фермеры Хакасии и Минусинска</p>
             </div>
-        </section>
-
-        <!-- Магазины и интерактивная карта -->
-        <section class="section stores" id="stores">
-            <div class="container stores__grid">
-                <div class="stores__intro">
-                    <h2 class="stores__title">Наши точки</h2>
-                    <p class="stores__description">7 магазинов с фермерской молочной продукцией в удобных районах города.</p>
-                    <a class="button button--outline" href="https://yandex.ru/maps/?text=Буренка%20от%20Solomona%20Абакан" target="_blank" rel="noopener noreferrer">Посмотреть все магазины <svg class="icon"><use href="#icon-arrow"/></svg></a>
-                </div>
-
-                <div class="store-map" id="store-map">
-                    <!-- Начальный вид — Абакан. Кнопки карточек показывают адрес на карте. -->
-                    <iframe id="map-frame" src="https://yandex.ru/map-widget/v1/?ll=91.442%2C53.721&amp;z=13&amp;lang=ru_RU" title="Карта магазинов в Абакане" loading="lazy" allowfullscreen class="store-map__frame"></iframe>
-                </div>
-
-                <article class="store-card">
-                    <div class="store-card__photo">
-                        <img src="../site/img/store-1.png" alt="Иллюстрация торговой точки" loading="lazy" width="1448" height="1086" class="store-card__image">
-                        <button class="round-arrow store-card__map-button" type="button" data-address="Абакан, улица Кирова, 112" aria-label="Показать ТК Аллея на карте"><svg class="icon"><use href="#icon-arrow"/></svg></button>
-                    </div>
-                    <div class="store-card__info"><h3 class="store-card__title">ТК «Аллея»</h3><p class="store-card__text">г. Абакан, ул. Кирова, 112</p><p class="store-card__hours store-card__text"><svg class="icon"><use href="#icon-pin"/></svg> Ежедневно 9:00 – 21:00</p></div>
-                </article>
-                <article class="store-card">
-                    <div class="store-card__photo">
-                        <img src="../site/img/store-2.png" alt="Иллюстрация торговой точки" loading="lazy" width="1448" height="1086" class="store-card__image">
-                        <button class="round-arrow store-card__map-button" type="button" data-address="Абакан, улица Некрасова, 31" aria-label="Показать ТК РолБи на карте"><svg class="icon"><use href="#icon-arrow"/></svg></button>
-                    </div>
-                    <div class="store-card__info"><h3 class="store-card__title">ТК «РолБи»</h3><p class="store-card__text">г. Абакан, ул. Некрасова, 31</p><p class="store-card__hours store-card__text"><svg class="icon"><use href="#icon-pin"/></svg> Ежедневно 9:00 – 21:00</p></div>
-                </article>
-                <article class="store-card">
-                    <div class="store-card__photo">
-                        <img src="../site/img/store-3.png" alt="Иллюстрация торговой точки" loading="lazy" width="1448" height="1086" class="store-card__image">
-                        <button class="round-arrow store-card__map-button" type="button" data-address="Абакан, улица Крылова, 85" aria-label="Показать ТК Владимирский на карте"><svg class="icon"><use href="#icon-arrow"/></svg></button>
-                    </div>
-                    <div class="store-card__info"><h3 class="store-card__title">ТК «Владимирский»</h3><p class="store-card__text">г. Абакан, ул. Крылова, 85</p><p class="store-card__hours store-card__text"><svg class="icon"><use href="#icon-pin"/></svg> Ежедневно 9:00 – 21:00</p></div>
-                </article>
+          </div>
+          <div class="advantages__item">
+            <svg class="icon advantages__icon"><use href="#icon-truck" /></svg>
+            <div>
+              <h3 class="advantages__title">Свежая поставка</h3>
+              <p class="advantages__text">Регулярное пополнение</p>
             </div>
-        </section>
-
-        <!-- Акции -->
-        <section class="section sales" id="sales">
-            <div class="container">
-                <div class="section-heading">
-                    <h2 class="section-heading__title">Акции и новинки</h2>
-                    <a class="text-link" href="sales.html">Все акции <svg class="icon"><use href="#icon-arrow"/></svg></a>
-                </div>
-                <p class="sales__description">Выгодные предложения и новые вкусы<br>из нашего ассортимента.</p>
-
-                <div class="sales__grid">
-                    <a class="sale-card" href="sales.html">
-                        <div class="sale-card__photo"><img src="../site/img/cheese.png" alt="Сыры Хакасии" loading="lazy" width="1254" height="1254" class="sale-card__image"><span class="badge">Акция</span></div>
-                        <div class="sale-card__info"><h3 class="sale-card__title">Сыры Хакасии</h3><p class="sale-card__value sale-card__text">-15%</p><p class="sale-card__text">На избранные сорта сыров<br>весь апрель</p></div>
-                        <svg class="icon sale-card__arrow"><use href="#icon-arrow"/></svg>
-                    </a>
-                    <a class="sale-card" href="catalog.html?category=yogurt">
-                        <div class="sale-card__photo"><img src="../site/img/yogurt.png" alt="Натуральные йогурты" loading="lazy" width="1254" height="1254" class="sale-card__image"><span class="badge">Новинка</span></div>
-                        <div class="sale-card__info"><h3 class="sale-card__title">Натуральные йогурты</h3><p class="sale-card__text">Новые вкусы<br>с горными ягодами</p></div>
-                        <svg class="icon sale-card__arrow"><use href="#icon-arrow"/></svg>
-                    </a>
-                    <a class="sale-card" href="sales.html">
-                        <div class="sale-card__photo"><img src="../site/img/milk.png" alt="Фермерское молоко" loading="lazy" width="1254" height="1254" class="sale-card__image"><span class="badge">Акция</span></div>
-                        <div class="sale-card__info"><h3 class="sale-card__title">Фермерское молоко</h3><p class="sale-card__value sale-card__value--small sale-card__text">3 по цене 2</p><p class="sale-card__text">На пастеризованное молоко 1 л</p></div>
-                        <svg class="icon sale-card__arrow"><use href="#icon-arrow"/></svg>
-                    </a>
-                </div>
+          </div>
+          <div class="advantages__item">
+            <svg class="icon advantages__icon"><use href="#icon-shop" /></svg>
+            <div>
+              <h3 class="advantages__title">7 торговых точек</h3>
+              <p class="advantages__text">Удобно рядом с вами</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
 
-        <!-- Для бизнеса -->
-        <section class="business" id="business">
-            <div class="container business__inner">
-                <div class="business__intro">
-                    <h2 class="business__title">Для бизнеса</h2>
-                    <p class="business__description">Надёжный поставщик натуральной молочной продукции для кафе, ресторанов, магазинов и HoReCa.</p>
-                    <a class="button" href="partner.html">Стать партнёром <svg class="icon"><use href="#icon-arrow"/></svg></a>
-                </div>
-                <div class="business__features">
-                    <div class="feature feature--compact"><span class="feature__icon"><svg class="icon feature__symbol"><use href="#icon-truck"/></svg></span><h3 class="feature__title">Стабильные поставки</h3><p class="feature__text">Свежая продукция в нужных объёмах</p></div>
-                    <div class="feature feature--compact"><span class="feature__icon"><svg class="icon feature__symbol"><use href="#icon-percent"/></svg></span><h3 class="feature__title">Специальные условия</h3><p class="feature__text">Для постоянных партнёров</p></div>
-                    <div class="feature feature--compact"><span class="feature__icon"><svg class="icon feature__symbol"><use href="#icon-document"/></svg></span><h3 class="feature__title">Широкий ассортимент</h3><p class="feature__text">Сыры, молоко, творог, йогурты и многое другое</p></div>
-                    <div class="feature feature--compact"><span class="feature__icon"><svg class="icon feature__symbol"><use href="#icon-handshake"/></svg></span><h3 class="feature__title">Индивидуальный подход</h3><p class="feature__text">Подберём решение под ваш бизнес</p></div>
-                </div>
-                <img class="business__photo" src="../site/img/business.png" alt="Сыродел нарезает фермерский сыр" loading="lazy" width="1536" height="1024">
+      <!-- Каталог категорий -->
+      <section class="section catalog" id="catalog">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Каталог продукции</h2>
+            <a class="text-link" href="catalog.html"
+              >Весь каталог <svg class="icon"><use href="#icon-arrow" /></svg
+            ></a>
+          </div>
+
+          <div class="categories">
+            <a class="category-card" href="catalog.html?category=cheese">
+              <img
+                src="../site/img/cheese.png"
+                alt="Фермерские сыры"
+                loading="lazy"
+                width="1254"
+                height="1254"
+                class="category-card__image"
+              />
+              <div class="category-card__caption">
+                <h3 class="category-card__title">Сыры</h3>
+                <span class="round-arrow"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </div>
+            </a>
+            <a class="category-card" href="catalog.html?category=milk">
+              <img
+                src="../site/img/milk.png"
+                alt="Молоко в стеклянных бутылках"
+                loading="lazy"
+                width="1254"
+                height="1254"
+                class="category-card__image"
+              />
+              <div class="category-card__caption">
+                <h3 class="category-card__title">Молоко</h3>
+                <span class="round-arrow"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </div>
+            </a>
+            <a class="category-card" href="catalog.html?category=curd">
+              <img
+                src="../site/img/curd.png"
+                alt="Творог в деревянной миске"
+                loading="lazy"
+                width="1254"
+                height="1254"
+                class="category-card__image"
+              />
+              <div class="category-card__caption">
+                <h3 class="category-card__title">Творог</h3>
+                <span class="round-arrow"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </div>
+            </a>
+            <a class="category-card" href="catalog.html?category=sour-cream">
+              <img
+                src="../site/img/sour-cream.png"
+                alt="Густая фермерская сметана"
+                loading="lazy"
+                width="1254"
+                height="1254"
+                class="category-card__image"
+              />
+              <div class="category-card__caption">
+                <h3 class="category-card__title">Сметана</h3>
+                <span class="round-arrow"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </div>
+            </a>
+            <a class="category-card" href="catalog.html?category=yogurt">
+              <img
+                src="../site/img/yogurt.png"
+                alt="Йогурты с ягодами"
+                loading="lazy"
+                width="1254"
+                height="1254"
+                class="category-card__image"
+              />
+              <div class="category-card__caption">
+                <h3 class="category-card__title">Йогурты</h3>
+                <span class="round-arrow"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </div>
+            </a>
+            <a class="category-card" href="catalog.html?category=butter">
+              <img
+                src="../site/img/butter.png"
+                alt="Фермерское сливочное масло"
+                loading="lazy"
+                width="1254"
+                height="1254"
+                class="category-card__image"
+              />
+              <div class="category-card__caption">
+                <h3 class="category-card__title">Масло</h3>
+                <span class="round-arrow"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Происхождение продукции -->
+      <section class="about" id="about">
+        <div class="container about__inner">
+          <div class="about__farm">
+            <img
+              src="../site/img/farm.png"
+              alt="Молоко и сыр на фоне пастбища"
+              loading="lazy"
+              width="1254"
+              height="1254"
+              class="about__farm-image"
+            />
+            <p class="handwritten about__note">
+              Чистая природа Хакасии —<br />натуральные продукты ♡
+            </p>
+          </div>
+
+          <div class="about__content">
+            <h2 class="about__title">Откуда эта продукция?</h2>
+            <p class="about__description">
+              Мы сотрудничаем с фермерскими хозяйствами Хакасии и Минусинска,
+              которые создают по-настоящему натуральные и качественные молочные
+              продукты.
+            </p>
+            <div class="about__features">
+              <div class="feature">
+                <span class="feature__icon"
+                  ><svg class="icon feature__symbol">
+                    <use href="#icon-leaf" /></svg
+                ></span>
+                <h3 class="feature__title">Натуральные рецепты</h3>
+                <p class="feature__text">Без заменителей и консервантов</p>
+              </div>
+              <div class="feature">
+                <span class="feature__icon"
+                  ><svg class="icon feature__symbol">
+                    <use href="#icon-mountain" /></svg
+                ></span>
+                <h3 class="feature__title">Местные производители</h3>
+                <p class="feature__text">Хакасия и Минусинский район</p>
+              </div>
+              <div class="feature">
+                <span class="feature__icon"
+                  ><svg class="icon feature__symbol">
+                    <use href="#icon-heart" /></svg
+                ></span>
+                <h3 class="feature__title">Настоящий вкус</h3>
+                <p class="feature__text">
+                  Традиционные технологии и забота о качестве
+                </p>
+              </div>
+              <div class="feature">
+                <span class="feature__icon"
+                  ><svg class="icon feature__symbol">
+                    <use href="#icon-people" /></svg
+                ></span>
+                <h3 class="feature__title">Поддерживаем фермеров</h3>
+                <p class="feature__text">Развиваем региональное производство</p>
+              </div>
             </div>
-        </section>
+          </div>
+
+          <figure class="about__pouring">
+            <img
+              src="../site/img/pouring.png"
+              alt="Фермер переливает свежее молоко"
+              loading="lazy"
+              width="1086"
+              height="1448"
+              class="about__pouring-image"
+            />
+            <figcaption class="handwritten about__caption">
+              От наших фермеров<br />к вашему столу ♡
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Магазины и интерактивная карта -->
+      <section class="section stores" id="stores">
+        <div class="container stores__grid">
+          <div class="stores__intro">
+            <h2 class="stores__title">Наши точки</h2>
+            <p class="stores__description">
+              7 магазинов с фермерской молочной продукцией в удобных районах
+              города.
+            </p>
+            <a
+              class="button button--outline"
+              href="https://yandex.ru/maps/?text=Буренка%20от%20Solomona%20Абакан"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Посмотреть все магазины
+              <svg class="icon"><use href="#icon-arrow" /></svg
+            ></a>
+          </div>
+
+          <div class="store-map" id="store-map">
+            <!-- Начальный вид — Абакан. Кнопки карточек показывают адрес на карте. -->
+            <iframe
+              id="map-frame"
+              src="https://yandex.ru/map-widget/v1/?ll=91.442%2C53.721&amp;z=13&amp;lang=ru_RU"
+              title="Карта магазинов в Абакане"
+              loading="lazy"
+              allowfullscreen
+              class="store-map__frame"
+            ></iframe>
+          </div>
+
+          <article class="store-card">
+            <div class="store-card__photo">
+              <img
+                src="../site/img/store-1.png"
+                alt="Иллюстрация торговой точки"
+                loading="lazy"
+                width="1448"
+                height="1086"
+                class="store-card__image"
+              />
+              <button
+                class="round-arrow store-card__map-button"
+                type="button"
+                data-address="Абакан, улица Кирова, 112"
+                aria-label="Показать ТК Аллея на карте"
+              >
+                <svg class="icon"><use href="#icon-arrow" /></svg>
+              </button>
+            </div>
+            <div class="store-card__info">
+              <h3 class="store-card__title">ТК «Аллея»</h3>
+              <p class="store-card__text">г. Абакан, ул. Кирова, 112</p>
+              <p class="store-card__hours store-card__text">
+                <svg class="icon"><use href="#icon-pin" /></svg> Ежедневно 9:00
+                – 21:00
+              </p>
+            </div>
+          </article>
+          <article class="store-card">
+            <div class="store-card__photo">
+              <img
+                src="../site/img/store-2.png"
+                alt="Иллюстрация торговой точки"
+                loading="lazy"
+                width="1448"
+                height="1086"
+                class="store-card__image"
+              />
+              <button
+                class="round-arrow store-card__map-button"
+                type="button"
+                data-address="Абакан, улица Некрасова, 31"
+                aria-label="Показать ТК РолБи на карте"
+              >
+                <svg class="icon"><use href="#icon-arrow" /></svg>
+              </button>
+            </div>
+            <div class="store-card__info">
+              <h3 class="store-card__title">ТК «РолБи»</h3>
+              <p class="store-card__text">г. Абакан, ул. Некрасова, 31</p>
+              <p class="store-card__hours store-card__text">
+                <svg class="icon"><use href="#icon-pin" /></svg> Ежедневно 9:00
+                – 21:00
+              </p>
+            </div>
+          </article>
+          <article class="store-card">
+            <div class="store-card__photo">
+              <img
+                src="../site/img/store-3.png"
+                alt="Иллюстрация торговой точки"
+                loading="lazy"
+                width="1448"
+                height="1086"
+                class="store-card__image"
+              />
+              <button
+                class="round-arrow store-card__map-button"
+                type="button"
+                data-address="Абакан, улица Крылова, 85"
+                aria-label="Показать ТК Владимирский на карте"
+              >
+                <svg class="icon"><use href="#icon-arrow" /></svg>
+              </button>
+            </div>
+            <div class="store-card__info">
+              <h3 class="store-card__title">ТК «Владимирский»</h3>
+              <p class="store-card__text">г. Абакан, ул. Крылова, 85</p>
+              <p class="store-card__hours store-card__text">
+                <svg class="icon"><use href="#icon-pin" /></svg> Ежедневно 9:00
+                – 21:00
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Акции -->
+      <section class="section sales" id="sales">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-heading__title">Акции и новинки</h2>
+            <a class="text-link" href="sales.html"
+              >Все акции <svg class="icon"><use href="#icon-arrow" /></svg
+            ></a>
+          </div>
+          <p class="sales__description">
+            Выгодные предложения и новые вкусы<br />из нашего ассортимента.
+          </p>
+
+          <div class="sales__grid">
+            <a class="sale-card" href="sales.html">
+              <div class="sale-card__photo">
+                <img
+                  src="../site/img/cheese.png"
+                  alt="Сыры Хакасии"
+                  loading="lazy"
+                  width="1254"
+                  height="1254"
+                  class="sale-card__image"
+                /><span class="badge">Акция</span>
+              </div>
+              <div class="sale-card__info">
+                <h3 class="sale-card__title">Сыры Хакасии</h3>
+                <p class="sale-card__value sale-card__text">-15%</p>
+                <p class="sale-card__text">
+                  На избранные сорта сыров<br />весь апрель
+                </p>
+              </div>
+              <svg class="icon sale-card__arrow">
+                <use href="#icon-arrow" />
+              </svg>
+            </a>
+            <a class="sale-card" href="catalog.html?category=yogurt">
+              <div class="sale-card__photo">
+                <img
+                  src="../site/img/yogurt.png"
+                  alt="Натуральные йогурты"
+                  loading="lazy"
+                  width="1254"
+                  height="1254"
+                  class="sale-card__image"
+                /><span class="badge">Новинка</span>
+              </div>
+              <div class="sale-card__info">
+                <h3 class="sale-card__title">Натуральные йогурты</h3>
+                <p class="sale-card__text">
+                  Новые вкусы<br />с горными ягодами
+                </p>
+              </div>
+              <svg class="icon sale-card__arrow">
+                <use href="#icon-arrow" />
+              </svg>
+            </a>
+            <a class="sale-card" href="sales.html">
+              <div class="sale-card__photo">
+                <img
+                  src="../site/img/milk.png"
+                  alt="Фермерское молоко"
+                  loading="lazy"
+                  width="1254"
+                  height="1254"
+                  class="sale-card__image"
+                /><span class="badge">Акция</span>
+              </div>
+              <div class="sale-card__info">
+                <h3 class="sale-card__title">Фермерское молоко</h3>
+                <p
+                  class="sale-card__value sale-card__value--small sale-card__text"
+                >
+                  3 по цене 2
+                </p>
+                <p class="sale-card__text">На пастеризованное молоко 1 л</p>
+              </div>
+              <svg class="icon sale-card__arrow">
+                <use href="#icon-arrow" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Для бизнеса -->
+      <section class="business" id="business">
+        <div class="container business__inner">
+          <div class="business__intro">
+            <h2 class="business__title">Для бизнеса</h2>
+            <p class="business__description">
+              Надёжный поставщик натуральной молочной продукции для кафе,
+              ресторанов, магазинов и HoReCa.
+            </p>
+            <a class="button" href="partner.html"
+              >Стать партнёром <svg class="icon"><use href="#icon-arrow" /></svg
+            ></a>
+          </div>
+          <div class="business__features">
+            <div class="feature feature--compact">
+              <span class="feature__icon"
+                ><svg class="icon feature__symbol">
+                  <use href="#icon-truck" /></svg
+              ></span>
+              <h3 class="feature__title">Стабильные поставки</h3>
+              <p class="feature__text">Свежая продукция в нужных объёмах</p>
+            </div>
+            <div class="feature feature--compact">
+              <span class="feature__icon"
+                ><svg class="icon feature__symbol">
+                  <use href="#icon-percent" /></svg
+              ></span>
+              <h3 class="feature__title">Специальные условия</h3>
+              <p class="feature__text">Для постоянных партнёров</p>
+            </div>
+            <div class="feature feature--compact">
+              <span class="feature__icon"
+                ><svg class="icon feature__symbol">
+                  <use href="#icon-document" /></svg
+              ></span>
+              <h3 class="feature__title">Широкий ассортимент</h3>
+              <p class="feature__text">
+                Сыры, молоко, творог, йогурты и многое другое
+              </p>
+            </div>
+            <div class="feature feature--compact">
+              <span class="feature__icon"
+                ><svg class="icon feature__symbol">
+                  <use href="#icon-handshake" /></svg
+              ></span>
+              <h3 class="feature__title">Индивидуальный подход</h3>
+              <p class="feature__text">Подберём решение под ваш бизнес</p>
+            </div>
+          </div>
+          <img
+            class="business__photo"
+            src="../site/img/business.png"
+            alt="Сыродел нарезает фермерский сыр"
+            loading="lazy"
+            width="1536"
+            height="1024"
+          />
+        </div>
+      </section>
     </main>
 
     <!-- Подвал -->
     <footer class="footer" id="contacts">
-        <div class="container">
-            <div class="footer__main">
-                <div class="footer__brand">
-                    <img src="../site/img/logo.png" alt="Буренка от Solomona" width="90" height="90" loading="lazy" class="footer__logo">
-                    <div><p class="footer__title">Буренка от Solomona</p><p>Фермерская молочная продукция<br>из Хакасии и Минусинска</p></div>
-                </div>
-                <nav class="footer__nav" aria-label="Каталог и информация">
-                    <a href="catalog.html" class="footer__link">Каталог</a><a href="#stores" class="footer__link">Магазины</a><a href="#about" class="footer__link">О продукции</a>
-                </nav>
-                <nav class="footer__nav" aria-label="Компания">
-                    <a href="company.html" class="footer__link">Производители</a><a href="#sales" class="footer__link">Акции</a><a href="#business" class="footer__link">Для бизнеса</a><a href="#contacts" class="footer__link">Контакты</a>
-                </nav>
-                <div class="footer__contacts">
-                    <!-- Контакты взяты с макета. Перед публикацией их нужно сверить. -->
-                    <a href="tel:+79029968424" class="footer__contact"><svg class="icon"><use href="#icon-phone"/></svg> +7 902 996-84-24</a>
-                    <p class="footer__contact"><svg class="icon"><use href="#icon-pin"/></svg> г. Абакан, Хакасия</p>
-                </div>
-                <a class="button footer__button" href="tel:+79029968424"><svg class="icon"><use href="#icon-chat"/></svg> Связаться с нами</a>
+      <div class="container">
+        <div class="footer__main">
+          <div class="footer__brand">
+            <img
+              src="../site/img/logo.png"
+              alt="Буренка от Solomona"
+              width="90"
+              height="90"
+              loading="lazy"
+              class="footer__logo"
+            />
+            <div>
+              <p class="footer__title">Буренка от Solomona</p>
+              <p>Фермерская молочная продукция<br />из Хакасии и Минусинска</p>
             </div>
-            <svg class="footer__mountains" viewBox="0 0 500 40" aria-hidden="true"><path d="m0 32 30-3 28 5 33-18 30 10 29-3 35 12 40-6 32-15 23 7 30-16 30 12 20-6 26 11 30-4 20 8 19-9"/><path d="m89 16 10 8 8-3m234-16 9 9 9-3"/></svg>
-            <div class="footer__bottom"><p>© 2024 Буренка от Solomona. Все права защищены.</p><p>Натурально. Вкусно. С любовью из Хакасии. ♡</p></div>
+          </div>
+          <nav class="footer__nav" aria-label="Каталог и информация">
+            <a href="catalog.html" class="footer__link">Каталог</a
+            ><a href="#stores" class="footer__link">Магазины</a
+            ><a href="#about" class="footer__link">О продукции</a>
+          </nav>
+          <nav class="footer__nav" aria-label="Компания">
+            <a href="company.html" class="footer__link">Производители</a
+            ><a href="#sales" class="footer__link">Акции</a
+            ><a href="#business" class="footer__link">Для бизнеса</a
+            ><a href="#contacts" class="footer__link">Контакты</a>
+          </nav>
+          <div class="footer__contacts">
+            <!-- Контакты взяты с макета. Перед публикацией их нужно сверить. -->
+            <a href="tel:+79029968424" class="footer__contact"
+              ><svg class="icon"><use href="#icon-phone" /></svg> +7 902
+              996-84-24</a
+            >
+            <p class="footer__contact">
+              <svg class="icon"><use href="#icon-pin" /></svg> г. Абакан,
+              Хакасия
+            </p>
+          </div>
+          <a class="button footer__button" href="tel:+79029968424"
+            ><svg class="icon"><use href="#icon-chat" /></svg> Связаться с
+            нами</a
+          >
         </div>
+        <svg class="footer__mountains" viewBox="0 0 500 40" aria-hidden="true">
+          <path
+            d="m0 32 30-3 28 5 33-18 30 10 29-3 35 12 40-6 32-15 23 7 30-16 30 12 20-6 26 11 30-4 20 8 19-9"
+          />
+          <path d="m89 16 10 8 8-3m234-16 9 9 9-3" />
+        </svg>
+        <div class="footer__bottom">
+          <p>© 2024 Буренка от Solomona. Все права защищены.</p>
+          <p>Натурально. Вкусно. С любовью из Хакасии. ♡</p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
