@@ -314,6 +314,10 @@ productCards.forEach(function (card) {
     function updateFavoriteButton() {
         const isFavorite = favorites.includes(productId);
 
+        favoriteButton.querySelector("img").src = isFavorite
+            ? "../site/icons/catalog-heart-active.svg"
+            : "../site/icons/catalog-heart-white.svg";
+
         favoriteButton.classList.toggle(
             "product-card__favorite--active",
             isFavorite

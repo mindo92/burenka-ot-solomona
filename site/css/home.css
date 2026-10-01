@@ -81,22 +81,16 @@ button:focus-visible {
   padding: 32px 0;
 }
 
-.svg-icons {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
 .icon {
+  object-fit: contain;
   width: 24px;
   height: 24px;
   flex-shrink: 0;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+
+
+
+
+
 }
 
 .visually-hidden {
@@ -137,6 +131,10 @@ button:focus-visible {
 .button--outline {
   color: var(--green);
   background: rgba(255, 255, 255, 0.6);
+}
+
+.button--outline:hover .icon {
+  filter: brightness(0) invert(1);
 }
 
 .button--outline:hover {
@@ -774,9 +772,9 @@ button:focus-visible {
   width: 40%;
   height: 40px;
   margin: 8px 0 -2px auto;
-  fill: none;
-  stroke: #d8dfc2;
-  stroke-width: 1;
+
+
+
 }
 
 .footer__bottom {

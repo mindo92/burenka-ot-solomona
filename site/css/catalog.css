@@ -86,22 +86,11 @@ summary:focus-visible {
   margin: 0 auto;
 }
 
-.svg-icons {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
 .icon {
+  object-fit: contain;
   width: 24px;
   height: 24px;
   flex-shrink: 0;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 /* Кнопки */
@@ -282,15 +271,17 @@ summary:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: clamp(6px, 0.7vw, 10px);
   min-width: 0;
-  min-height: 60px;
-  padding: 8px 10px;
+  min-height: 76px;
+  padding: 10px;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
   background: #fffdf8;
   color: var(--text);
-  font-size: 13px;
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(85, 65, 30, 0.04);
   transition:
     background 0.2s,
     border-color 0.2s;
@@ -307,10 +298,9 @@ summary:focus-visible {
 }
 
 .categories__image {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  object-fit: cover;
+  width: clamp(46px, 4.2vw, 58px);
+  height: clamp(46px, 4.2vw, 58px);
+  object-fit: contain;
   flex-shrink: 0;
 }
 
@@ -560,15 +550,6 @@ summary:focus-visible {
 .product-card__favorite .icon {
   width: 21px;
   height: 21px;
-}
-
-.product-card__favorite--active {
-  color: #ffdedb;
-}
-
-.product-card__favorite--active .icon {
-  fill: #c84949;
-  stroke: #fff;
 }
 
 .product-card__body {
@@ -881,27 +862,27 @@ summary:focus-visible {
 /* Ноутбуки и планшеты */
 
 @media (max-width: 1300px) {
-    .catalog-hero {
-        background-image:
-            linear-gradient(
-                to right,
-                rgba(250, 246, 237, 0.35) 0%,
-                rgba(250, 246, 237, 0.15) 38%,
-                transparent 58%
-            ),
-            url("../img/catalog/catalog-hero.png");
+  .catalog-hero {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(250, 246, 237, 0.35) 0%,
+        rgba(250, 246, 237, 0.15) 38%,
+        transparent 58%
+      ),
+      url("../img/catalog/catalog-hero.png");
 
-        /* Слева остаётся больше светлой части фотографии */
-        background-position: left center;
-    }
+    /* Слева остаётся больше светлой части фотографии */
+    background-position: left center;
+  }
 
-    .catalog-hero__content {
-        width: 44%;
-    }
+  .catalog-hero__content {
+    width: 44%;
+  }
 
-    .catalog-hero__subtitle br {
-        display: none;
-    }
+  .catalog-hero__subtitle br {
+    display: none;
+  }
 }
 
 /* Небольшие ноутбуки */
@@ -931,17 +912,6 @@ summary:focus-visible {
 
   .catalog__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .categories__button {
-    gap: 6px;
-    padding: 8px 6px;
-    font-size: 12px;
-  }
-
-  .categories__image {
-    width: 32px;
-    height: 32px;
   }
 
   .benefits__item {
@@ -1021,7 +991,13 @@ summary:focus-visible {
   }
 
   .categories__button {
-    font-size: 13px;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .categories__image {
+    width: 54px;
+    height: 54px;
   }
 
   .catalog__grid {
@@ -1066,24 +1042,23 @@ summary:focus-visible {
 /* Узкие планшеты */
 
 @media (max-width: 900px) {
-    .catalog-hero__content {
-        width: 55%;
-    }
+  .catalog-hero__content {
+    width: 55%;
+  }
 
-    .catalog-hero__title {
-        font-size: clamp(26px, 3.4vw, 31px);
-    }
+  .catalog-hero__title {
+    font-size: clamp(26px, 3.4vw, 31px);
+  }
 
-    .catalog-hero__subtitle {
-        font-size: clamp(19px, 2.5vw, 23px);
-    }
+  .catalog-hero__subtitle {
+    font-size: clamp(19px, 2.5vw, 23px);
+  }
 
-    .catalog-hero__description {
-        margin-top: 14px;
-        font-size: 14px;
-    }
+  .catalog-hero__description {
+    margin-top: 14px;
+    font-size: 14px;
+  }
 }
-
 
 /* Узкие планшеты */
 
@@ -1092,6 +1067,10 @@ summary:focus-visible {
     width: calc(100% - 40px);
   }
 
+  .categories__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
   .catalog-hero__content {
     width: 80%;
   }
@@ -1131,51 +1110,52 @@ summary:focus-visible {
 /* Телефоны: текст сверху, фотография снизу */
 
 @media (max-width: 600px) {
-    .catalog-hero {
-        background-color: var(--cream);
+  .catalog-hero {
+    background-color: var(--cream);
 
-        background-image:
-            linear-gradient(
-                to bottom,
-                var(--cream) 0%,
-                rgba(250, 246, 237, 0.75) 15%,
-                transparent 40%
-            ),
-            url("../img/catalog/catalog-hero.png");
+    background-image:
+      linear-gradient(
+        to bottom,
+        var(--cream) 0%,
+        rgba(250, 246, 237, 0.75) 15%,
+        transparent 40%
+      ),
+      url("../img/catalog/catalog-hero.png");
 
-        background-position: center bottom;
-        background-size: 100% 200px, auto 200px;
-        background-repeat: no-repeat;
-    }
+    background-position: center bottom;
+    background-size:
+      100% 200px,
+      auto 200px;
+    background-repeat: no-repeat;
+  }
 
-    .catalog-hero__inner {
-        min-height: 0;
-        padding-top: 40px;
-        padding-bottom: 200px;
-    }
+  .catalog-hero__inner {
+    min-height: 0;
+    padding-top: 40px;
+    padding-bottom: 200px;
+  }
 
-    .catalog-hero__content {
-        width: 100%;
-        max-width: 440px;
-    }
+  .catalog-hero__content {
+    width: 100%;
+    max-width: 440px;
+  }
 
-    .catalog-hero__title {
-        font-size: clamp(28px, 6vw, 34px);
-    }
+  .catalog-hero__title {
+    font-size: clamp(28px, 6vw, 34px);
+  }
 
-    .catalog-hero__subtitle {
-        font-size: clamp(20px, 4.5vw, 24px);
-    }
+  .catalog-hero__subtitle {
+    font-size: clamp(20px, 4.5vw, 24px);
+  }
 
-    .catalog-hero__description {
-        max-width: 400px;
-        font-size: 14px;
-    }
+  .catalog-hero__description {
+    max-width: 400px;
+    font-size: 14px;
+  }
 }
 /* Телефоны */
 
 @media (max-width: 500px) {
-
   .categories {
     padding: 16px 0;
   }
@@ -1186,9 +1166,16 @@ summary:focus-visible {
   }
 
   .categories__button {
-    min-height: 48px;
     justify-content: flex-start;
-    padding: 8px 14px;
+    gap: 8px;
+    min-height: 60px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .categories__image {
+    width: 38px;
+    height: 38px;
   }
 
   .catalog {
