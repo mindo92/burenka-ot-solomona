@@ -1,0 +1,495 @@
+/* Главный экран */
+
+.sales-hero {
+  position: relative;
+  background: var(--cream);
+}
+
+.sales-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sales-hero__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 360px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.sales-hero__content {
+  width: 44%;
+  max-width: 480px;
+}
+
+.sales-hero__breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.sales-hero__breadcrumbs a:hover {
+  color: var(--green);
+}
+
+.sales-hero__title {
+  margin-bottom: 12px;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.sales-hero__description {
+  max-width: 370px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Список предложений */
+
+.sales {
+  padding: 16px 0 40px;
+}
+
+.sales__list {
+  display: grid;
+  gap: 12px;
+}
+
+/* Карточка акции */
+
+.sale-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fffaf1;
+}
+
+.sale-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sale-card__content {
+  position: relative;
+  z-index: 1;
+  width: 46%;
+  padding: 26px 36px;
+}
+
+.sale-card__label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 8px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: #548346;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.sale-card__title {
+  margin-bottom: 8px;
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.sale-card__description {
+  max-width: 390px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.sale-card__button {
+  min-height: 38px;
+  margin-top: 16px;
+  padding: 9px 22px;
+  border-radius: 24px;
+  font-weight: 400;
+}
+
+/* Круглая плашка */
+
+.sale-card__badge {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 132px;
+  height: 132px;
+  padding: 12px;
+  border: 2px dashed #d2be90;
+  border-radius: 50%;
+  background: #efdfb4;
+  color: #171e17;
+  text-align: center;
+  transform: rotate(-5deg);
+}
+
+.sale-card__badge--green {
+  border-color: #789663;
+  background: #456b32;
+  color: #fff;
+}
+
+.sale-card__discount {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 45px;
+  line-height: 1;
+}
+
+.sale-card__badge-text {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+/* До 1300px */
+
+@media (max-width: 1300px) {
+  .header__inner {
+    gap: 16px;
+  }
+  .navigation {
+    gap: 10px;
+  }
+  .navigation__link {
+    font-size: 12px;
+  }
+  .header__button {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+  .sales-hero__inner {
+    min-height: 330px;
+  }
+  .sale-card__content {
+    padding: 24px 28px;
+  }
+  .sale-card__badge {
+    width: 120px;
+    height: 120px;
+  }
+  .sale-card__discount {
+    font-size: 40px;
+  }
+  .sale-card__badge-text {
+    font-size: 14px;
+  }
+}
+
+/* До 1100px */
+
+@media (max-width: 1100px) {
+  .header__button {
+    margin-left: auto;
+  }
+  .header__menu {
+    display: flex;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--border);
+    background: #fffaf1;
+    box-shadow: 0 10px 20px rgba(30, 45, 20, 0.08);
+  }
+
+  .navigation--open {
+    display: flex;
+  }
+  .navigation__link {
+    padding: 12px 0;
+    font-size: 15px;
+  }
+  .navigation__link--active::after {
+    display: none;
+  }
+  .sales-hero__content {
+    width: 45%;
+  }
+  .sale-card__content {
+    width: 47%;
+    padding: 22px;
+  }
+  .sale-card__title {
+    font-size: 28px;
+  }
+  .sale-card__description {
+    font-size: 14px;
+  }
+  .sale-card__badge {
+    top: 12px;
+    right: 12px;
+    width: 106px;
+    height: 106px;
+  }
+  .sale-card__discount {
+    font-size: 36px;
+  }
+  .sale-card__badge-text {
+    font-size: 13px;
+  }
+}
+
+/* До 900px */
+
+@media (max-width: 900px) {
+  .sales-hero__inner {
+    min-height: 300px;
+  }
+  .sales-hero__description {
+    font-size: 14px;
+  }
+  .sale-card {
+    min-height: 240px;
+  }
+  .sale-card__content {
+    width: 48%;
+    padding: 20px;
+  }
+  .sale-card__title {
+    font-size: 25px;
+  }
+  .sale-card__description {
+    font-size: 13px;
+  }
+  .sale-card__button {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+  .sale-card__badge {
+    width: 94px;
+    height: 94px;
+    padding: 8px;
+  }
+  .sale-card__discount {
+    font-size: 32px;
+  }
+  .sale-card__badge-text {
+    font-size: 11px;
+  }
+}
+
+/* До 768px: текст над фотографиями */
+
+@media (max-width: 768px) {
+  .sales-hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .sales-hero__inner {
+    order: -1;
+    min-height: 0;
+    padding-top: 46px;
+    padding-bottom: 24px;
+  }
+  .sales-hero__content {
+    width: 100%;
+    max-width: 540px;
+  }
+  .sales-hero__description {
+    max-width: 450px;
+    font-size: 15px;
+  }
+
+  .sales-hero__image {
+    position: static;
+    height: auto;
+    aspect-ratio: 2.4;
+    object-position: right center;
+  }
+
+  .sales {
+    padding-top: 20px;
+  }
+  .sales__list {
+    gap: 18px;
+  }
+  .sale-card {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+  }
+  .sale-card__content {
+    order: -1;
+    width: 100%;
+    padding: 24px;
+  }
+  .sale-card__title {
+    font-size: 30px;
+  }
+  .sale-card__description {
+    max-width: 500px;
+    font-size: 15px;
+  }
+  .sale-card__button {
+    font-size: 13px;
+  }
+
+  .sale-card__image {
+    position: static;
+    height: auto;
+    aspect-ratio: 2.2;
+    object-position: right center;
+  }
+
+  .sale-card__badge {
+    top: auto;
+    right: 14px;
+    bottom: 14px;
+    width: 106px;
+    height: 106px;
+  }
+  .sale-card__discount {
+    font-size: 36px;
+  }
+  .sale-card__badge-text {
+    font-size: 13px;
+  }
+}
+
+/* До 500px */
+
+@media (max-width: 500px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+  .header__inner {
+    gap: 12px;
+  }
+  .header__logo {
+    width: 76px;
+  }
+  .header__button {
+    gap: 6px;
+    padding: 10px;
+    font-size: 11px;
+  }
+  .header__button .icon {
+    width: 18px;
+    height: 18px;
+  }
+  .sales-hero__inner {
+    padding-top: 38px;
+  }
+  .sales-hero__title {
+    font-size: 44px;
+  }
+  .sales-hero__description {
+    font-size: 14px;
+  }
+  .sales-hero__image {
+    aspect-ratio: 1.8;
+  }
+  .sale-card__content {
+    padding: 20px;
+  }
+  .sale-card__title {
+    font-size: 27px;
+  }
+  .sale-card__description {
+    font-size: 14px;
+  }
+  .sale-card__image {
+    aspect-ratio: 1.7;
+  }
+  .sale-card__badge {
+    right: 10px;
+    bottom: 10px;
+    width: 94px;
+    height: 94px;
+  }
+  .sale-card__discount {
+    font-size: 32px;
+  }
+  .sale-card__badge-text {
+    font-size: 11px;
+  }
+}
+
+/* До 400px */
+
+@media (max-width: 400px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+  .sale-card__content {
+    padding: 18px;
+  }
+  .sale-card__title {
+    font-size: 25px;
+  }
+  .sale-card__label {
+    font-size: 11px;
+  }
+  .sale-card__badge {
+    width: 84px;
+    height: 84px;
+  }
+  .sale-card__discount {
+    font-size: 28px;
+  }
+  .sale-card__badge-text {
+    font-size: 10px;
+  }
+}
+
+/* До 360px */
+
+@media (max-width: 360px) {
+  .header__inner {
+    gap: 8px;
+  }
+  .header__logo {
+    width: 68px;
+  }
+  .header__button {
+    padding: 9px 8px;
+    font-size: 10px;
+  }
+  .sale-card__content {
+    padding: 16px;
+  }
+  .sale-card__title {
+    font-size: 23px;
+  }
+  .sale-card__description {
+    font-size: 13px;
+  }
+  .sale-card__image {
+    aspect-ratio: 1.5;
+  }
+}
