@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Партнёрам — Буренка от Solomona</title>
+    <link rel="stylesheet" href="../site/css/catalog.css" />
+    <link rel="stylesheet" href="../site/css/partner.css" />
+    <script src="../site/scripts/partner.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="header__logo" href="home.html" aria-label="На главную">
+          <img src="../site/img/logo.png" alt="Буренка от Solomona" />
+        </a>
+
+        <nav class="navigation" id="navigation" aria-label="Основное меню">
+          <a class="navigation__link" href="catalog.html">Каталог</a>
+
+          <a class="navigation__link" href="home.html#stores">Магазины</a>
+          <a class="navigation__link" href="home.html#about">О продукции</a>
+          <a class="navigation__link" href="company.html">Производители</a>
+          <a class="navigation__link" href="sales.html">Акции</a>
+          <a
+            class="navigation__link navigation__link--active"
+            href="partner.html"
+            aria-current="page"
+            >Для бизнеса</a
+          >
+          <a class="navigation__link" href="#contacts">Контакты</a>
+        </nav>
+
+        <a class="button header__button" href="home.html#stores">
+          <img
+            class="icon"
+            src="../site/icons/catalog-location-white.svg"
+            alt=""
+          />
+          <span>Найти магазин</span>
+        </a>
+
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="Открыть меню"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Главный экран -->
+      <section class="partner-hero">
+        <img
+          class="partner-hero__image"
+          src="../site/img/partner/partner-hero.png"
+          alt="Корова на ферме у подножия гор"
+          fetchpriority="high"
+        />
+        <div class="container partner-hero__inner">
+          <div class="partner-hero__content">
+            <h1 class="partner-hero__title">Партнёрам</h1>
+            <p class="partner-hero__description">
+              Надёжное сотрудничество с производителями, фермерскими хозяйствами
+              и поставщиками натуральной продукции
+            </p>
+            <div class="partner-hero__buttons">
+              <a class="button" href="#partner-contact">Стать партнёром</a>
+              <a class="button partner-hero__button" href="#partner-contact"
+                >Обсудить сотрудничество</a
+              >
+            </div>
+            <div class="partner-hero__stats">
+              <div class="partner-hero__stat">
+                <p class="partner-hero__value">6+</p>
+                <p class="partner-hero__caption">магазинов в сети</p>
+              </div>
+              <div class="partner-hero__stat">
+                <p class="partner-hero__value">Вся Хакасия</p>
+                <p class="partner-hero__caption">и соседние регионы</p>
+              </div>
+              <div class="partner-hero__stat">
+                <p class="partner-hero__value">Постоянный спрос</p>
+                <p class="partner-hero__caption">на качественную продукцию</p>
+              </div>
+            </div>
+          </div>
+          <p class="partner-hero__note">
+            Натуральные продукты<br />от надёжных партнёров
+          </p>
+        </div>
+      </section>
+
+      <!-- Преимущества -->
+      <section class="partner-benefits">
+        <div class="container">
+          <div class="partner-section">
+            <div class="partner-section__heading">
+              <p class="partner-section__label">Почему с нами выгодно</p>
+              <h2 class="partner-section__title">
+                Преимущества сотрудничества
+              </h2>
+            </div>
+            <p class="partner-section__text">
+              Мы ценим долгосрочные отношения и работаем только с проверенными
+              производителями, которые разделяют наши ценности качества и
+              натуральности.
+            </p>
+          </div>
+          <div class="partner-benefits__list">
+            <article class="partner-benefits__card">
+              <div class="partner-benefits__icon">
+                <img src="../site/icons/partner-cart.svg" alt="" />
+              </div>
+              <h3 class="partner-benefits__title">Стабильный сбыт</h3>
+              <p class="partner-benefits__text">
+                Постоянный спрос и сеть магазинов в Хакасии и соседних регионах.
+              </p>
+            </article>
+            <article class="partner-benefits__card">
+              <div class="partner-benefits__icon">
+                <img src="../site/icons/partner-handshake.svg" alt="" />
+              </div>
+              <h3 class="partner-benefits__title">Надёжное партнёрство</h3>
+              <p class="partner-benefits__text">
+                Честные условия, прозрачная работа и долгосрочное
+                сотрудничество.
+              </p>
+            </article>
+            <article class="partner-benefits__card">
+              <div class="partner-benefits__icon">
+                <img src="../site/icons/partner-quality.svg" alt="" />
+              </div>
+              <h3 class="partner-benefits__title">Акцент на качество</h3>
+              <p class="partner-benefits__text">
+                Тщательный отбор продукции и контроль на всех этапах.
+              </p>
+            </article>
+            <article class="partner-benefits__card">
+              <div class="partner-benefits__icon">
+                <img src="../site/icons/partner-location.svg" alt="" />
+              </div>
+              <h3 class="partner-benefits__title">
+                Развитие регионального производства
+              </h3>
+              <p class="partner-benefits__text">
+                Поддерживаем локальных фермеров и производителей из Сибири.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Этапы сотрудничества -->
+      <section class="partner-process">
+        <div class="container">
+          <div class="partner-section">
+            <div class="partner-section__heading">
+              <p class="partner-section__label">Как начать сотрудничество</p>
+              <h2 class="partner-section__title">Простой и понятный процесс</h2>
+            </div>
+            <p class="partner-section__text">
+              Мы открыты к новым предложениям и всегда готовы рассмотреть
+              сотрудничество.
+            </p>
+          </div>
+          <ol class="partner-process__list">
+            <li class="partner-process__step">
+              <span class="partner-process__number">1</span>
+              <h3 class="partner-process__title">Оставьте заявку</h3>
+              <p class="partner-process__text">
+                Расскажите о себе и вашей продукции.
+              </p>
+            </li>
+            <li class="partner-process__step">
+              <span class="partner-process__number">2</span>
+              <h3 class="partner-process__title">Обсудим условия</h3>
+              <p class="partner-process__text">
+                Свяжемся с вами и обсудим детали сотрудничества.
+              </p>
+            </li>
+            <li class="partner-process__step">
+              <span class="partner-process__number">3</span>
+              <h3 class="partner-process__title">Проведём дегустацию</h3>
+              <p class="partner-process__text">
+                Оценим качество продукции и согласуем ассортимент.
+              </p>
+            </li>
+            <li class="partner-process__step">
+              <span class="partner-process__number">4</span>
+              <h3 class="partner-process__title">Начнём сотрудничество</h3>
+              <p class="partner-process__text">
+                Заключаем договор и запускаем поставки в наши магазины.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Приглашение поставщиков -->
+      <section class="partner-invite">
+        <img
+          class="partner-invite__image"
+          src="../site/img/partner/partner-products.png"
+          alt="Фермерские молочные продукты на деревянных полках"
+          loading="lazy"
+        />
+        <div class="container partner-invite__inner">
+          <div class="partner-invite__content">
+            <p class="partner-section__label">Мы ищем</p>
+            <h2 class="partner-invite__title">
+              Кого мы приглашаем к сотрудничеству
+            </h2>
+            <ul class="partner-invite__list">
+              <li class="partner-invite__item">
+                <img src="../site/icons/partner-check.svg" alt="" />
+                <span>Фермерские хозяйства</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="../site/icons/partner-check.svg" alt="" />
+                <span>Производители молочной продукции</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="../site/icons/partner-check.svg" alt="" />
+                <span>Поставщики сыра, творога, масла, йогуртов</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="../site/icons/partner-check.svg" alt="" />
+                <span>Производители мясной и колбасной продукции</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="../site/icons/partner-check.svg" alt="" />
+                <span>Поставщики мёда, ягод, варенья и консервации</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="../site/icons/partner-check.svg" alt="" />
+                <span>Производители натуральных и экологичных продуктов</span>
+              </li>
+            </ul>
+            <a class="button partner-invite__button" href="#partner-contact"
+              >Предложить продукцию</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Контакты для партнёров -->
+      <section class="partner-contact" id="partner-contact">
+        <img
+          class="partner-contact__image"
+          src="../site/img/partner/partner-contact.png"
+          alt=""
+          loading="lazy"
+        />
+        <div class="container partner-contact__inner">
+          <div class="partner-contact__content">
+            <p class="partner-section__label">Свяжитесь с нами</p>
+            <h2 class="partner-section__title">Давайте сотрудничать</h2>
+            <p class="partner-contact__description">
+              Оставьте заявку, и мы свяжемся с вами в ближайшее время для
+              обсуждения условий сотрудничества.
+            </p>
+            <div class="partner-contact__actions">
+              <button
+                class="button partner-contact__button"
+                type="button"
+                data-open-form
+              >
+                Оставить заявку
+              </button>
+
+              <a class="partner-contact__telegram" href="">
+                <span class="partner-contact__telegram-icon">
+                  <img src="../site/icons/partner-telegram.svg" alt="" />
+                </span>
+                <span>Написать в Telegram</span>
+              </a>
+            </div>
+          </div>
+          <div class="partner-contact__card">
+            <a class="partner-contact__item" href="tel:+79029968424">
+              <span class="partner-contact__icon"
+                ><img src="../site/icons/partner-phone.svg" alt=""
+              /></span>
+              <span>+7 902 996-84-24</span>
+            </a>
+            <a class="partner-contact__item" href="mailto:partner@burenka19.ru">
+              <span class="partner-contact__icon"
+                ><img src="../site/icons/partner-mail.svg" alt=""
+              /></span>
+              <span>partner@burenka19.ru</span>
+            </a>
+            <p class="partner-contact__item">
+              <span class="partner-contact__icon"
+                ><img src="../site/icons/partner-time.svg" alt=""
+              /></span>
+              <span>Ежедневно с 09:00 до 21:00</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Окно заявки. В action нужно указать адрес серверного обработчика. -->
+    <dialog class="partner-form" aria-labelledby="partner-form-title">
+      <button
+        class="partner-form__close"
+        type="button"
+        aria-label="Закрыть форму"
+      >
+        ×
+      </button>
+      <h2 class="partner-form__title" id="partner-form-title">
+        Заявка на сотрудничество
+      </h2>
+      <p class="partner-form__description">
+        Расскажите о себе, и мы свяжемся с вами для обсуждения деталей.
+      </p>
+      <form class="partner-form__fields" action="" method="post">
+        <label class="partner-form__label" for="partner-name">Ваше имя</label>
+        <input
+          class="partner-form__input"
+          id="partner-name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          maxlength="100"
+          required
+        />
+
+        <label class="partner-form__label" for="partner-phone">Телефон</label>
+        <input
+          class="partner-form__input"
+          id="partner-phone"
+          name="phone"
+          type="tel"
+          autocomplete="tel"
+          maxlength="40"
+          required
+        />
+
+        <label class="partner-form__label" for="partner-message"
+          >Что вы предлагаете?</label
+        >
+        <textarea
+          class="partner-form__input partner-form__input--message"
+          id="partner-message"
+          name="message"
+          rows="4"
+          maxlength="2000"
+          required
+        ></textarea>
+
+        <!-- <button class="button partner-form__submit" type="submit">
+          Отправить заявку
+        </button> -->
+        <p class="partner-form__status" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <div class="footer__top">
+          <a class="footer__brand" href="home.html">
+            <img class="footer__logo" src="../site/img/logo.png" alt="" />
+            <div>
+              <p class="footer__name">Буренка от Solomona</p>
+              <p class="footer__description">
+                Фермерская молочная продукция<br />
+                из Хакасии и Минусинска
+              </p>
+            </div>
+          </a>
+
+          <nav class="footer__navigation" aria-label="Меню в подвале">
+            <a href="catalog.html">Каталог</a>
+            <a href="home.html#stores">Магазины</a>
+            <a href="home.html#about">О продукции</a>
+            <a href="company.html">Производители</a>
+            <a href="sales.html">Акции</a>
+            <a href="partner.html">Для бизнеса</a>
+          </nav>
+
+          <div class="footer__contacts">
+            <p class="footer__location">
+              <img
+                class="icon"
+                src="../site/icons/catalog-location-white.svg"
+                alt=""
+              />
+              г. Абакан, Хакасия
+            </p>
+
+            <a class="button button--light" href="home.html#contacts">
+              Связаться с нами
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Буренка от Solomona. Все права защищены.</p>
+          <p>Натурально. Вкусно. С любовью из Хакасии. ♡</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
