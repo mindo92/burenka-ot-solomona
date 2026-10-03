@@ -1,752 +1,1378 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Каталог — Буренка от Solomona</title>
 
-    <link rel="stylesheet" href="../site/css/catalog.css">
+    <link rel="stylesheet" href="../site/css/catalog.css" />
     <script src="../site/scripts/catalog.js" defer></script>
-</head>
+  </head>
 
-<body>
-<!-- Шапка -->
+  <body>
+    <!-- Шапка -->
     <header class="header">
-        <div class="container header__inner">
-            <a class="header__logo" href="home.html" aria-label="На главную">
-                <img src="../site/img/logo.png" alt="Буренка от Solomona">
-            </a>
+      <div class="container header__inner">
+        <a class="header__logo" href="home.html" aria-label="На главную">
+          <img src="../site/img/logo.png" alt="Буренка от Solomona" />
+        </a>
 
-            <nav class="navigation" id="navigation" aria-label="Основное меню">
-                <a class="navigation__link navigation__link--active"
-                   href="catalog.html" aria-current="page">Каталог</a>
+        <nav class="navigation" id="navigation" aria-label="Основное меню">
+          <a
+            class="navigation__link navigation__link--active"
+            href="catalog.html"
+            aria-current="page"
+            >Каталог</a
+          >
 
-                <a class="navigation__link" href="home.html#stores">Магазины</a>
-                <a class="navigation__link" href="home.html#about">О продукции</a>
-                <a class="navigation__link" href="company.html">Производители</a>
-                <a class="navigation__link" href="sales.html">Акции</a>
-                <a class="navigation__link" href="partner.html">Для бизнеса</a>
-                <a class="navigation__link" href="#contacts">Контакты</a>
-            </nav>
+          <a class="navigation__link" href="home.html#stores">Магазины</a>
+          <a class="navigation__link" href="about.html">О компании</a>
+          <a class="navigation__link" href="sales.html">Акции</a>
+          <a class="navigation__link" href="partner.html">Для бизнеса</a>
+          <a class="navigation__link" href="#contacts">Контакты</a>
+        </nav>
 
-            <a class="button header__button" href="home.html#stores">
-                <img class="icon" src="../site/icons/catalog-location-white.svg" alt="">
-                <span>Найти магазин</span>
-            </a>
+        <a class="button header__button" href="home.html#stores">
+          <img
+            class="icon"
+            src="../site/icons/catalog-location-white.svg"
+            alt=""
+          />
+          <span>Найти магазин</span>
+        </a>
 
-            <button class="header__menu" type="button"
-                    aria-label="Открыть меню"
-                    aria-controls="navigation"
-                    aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="Открыть меню"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>
-        <!-- Главный экран каталога -->
-        <section class="catalog-hero">
-            <div class="container catalog-hero__inner">
-                <div class="catalog-hero__content">
-                    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-                        <a class="breadcrumbs__link" href="index.html">Главная</a>
-                        <span aria-hidden="true">/</span>
-                        <span>Каталог</span>
-                    </nav>
+      <!-- Главный экран каталога -->
+      <section class="catalog-hero">
+        <div class="container catalog-hero__inner">
+          <div class="catalog-hero__content">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+              <a class="breadcrumbs__link" href="index.html">Главная</a>
+              <span aria-hidden="true">/</span>
+              <span>Каталог</span>
+            </nav>
 
-                    <h1 class="catalog-hero__title">Каталог продукции</h1>
+            <h1 class="catalog-hero__title">Каталог продукции</h1>
 
-                    <p class="catalog-hero__subtitle">
-                        Фермерская молочная продукция<br>
-                        из Хакасии и Минусинска
-                    </p>
+            <p class="catalog-hero__subtitle">
+              Фермерская молочная продукция<br />
+              из Хакасии и Минусинска
+            </p>
 
-                    <p class="catalog-hero__description">
-                        Натуральные сыры, молоко, творог, йогурты и другие
-                        молочные продукты от проверенных фермеров.
-                        Качество, которому можно доверять.
-                    </p>
+            <p class="catalog-hero__description">
+              Натуральные сыры, молоко, творог, йогурты и другие молочные
+              продукты от проверенных фермеров. Качество, которому можно
+              доверять.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Категории -->
+      <section class="categories" aria-label="Категории продукции">
+        <div class="container categories__list">
+          <button
+            class="categories__button categories__button--active"
+            type="button"
+            data-category="all"
+            aria-pressed="true"
+          >
+            <img
+              class="icon"
+              src="../site/icons/catalog-grid-white.svg"
+              alt=""
+            />
+            Все
+          </button>
+
+          <button
+            class="categories__button"
+            type="button"
+            data-category="cheese"
+            aria-pressed="false"
+          >
+            <img
+              class="categories__image"
+              src="../site/img/catalog/categories/cheese.png"
+              alt=""
+            />
+            Сыры
+          </button>
+
+          <button
+            class="categories__button"
+            type="button"
+            data-category="milk"
+            aria-pressed="false"
+          >
+            <img
+              class="categories__image"
+              src="../site/img/catalog/categories/milk.png"
+              alt="Молоко"
+            />
+            Молоко
+          </button>
+
+          <button
+            class="categories__button"
+            type="button"
+            data-category="curd"
+            aria-pressed="false"
+          >
+            <img
+              class="categories__image"
+              src="../site/img/catalog/categories/curd.png"
+              alt="Творог"
+            />
+            Творог
+          </button>
+
+          <button
+            class="categories__button"
+            type="button"
+            data-category="cream"
+            aria-pressed="false"
+          >
+            <img
+              class="categories__image"
+              src="../site/img/catalog/categories/sour-cream.png"
+              alt="Сметана"
+            />
+            Сметана
+          </button>
+
+          <button
+            class="categories__button"
+            type="button"
+            data-category="yogurt"
+            aria-pressed="false"
+          >
+            <img
+              class="categories__image"
+              src="../site/img/catalog/categories/yogurt.png"
+              alt="Йогурты"
+            />
+            Йогурты
+          </button>
+
+          <button
+            class="categories__button"
+            type="button"
+            data-category="butter"
+            aria-pressed="false"
+          >
+            <img
+              class="categories__image"
+              src="../site/img/catalog/categories/butter.png"
+              alt="Масло"
+            />
+            Масло
+          </button>
+
+          <button
+            class="categories__button"
+            type="button"
+            data-category="kefir"
+            aria-pressed="false"
+          >
+            <img
+              class="categories__image"
+              src="../site/img/catalog/categories/kefir.png"
+              alt="Кефир"
+            />
+            Кефир
+          </button>
+        </div>
+      </section>
+
+      <!-- Фильтры и товары -->
+      <section class="catalog">
+        <div class="container catalog__layout">
+          <aside class="filters">
+            <h2 class="filters__title">
+              <img class="icon" src="../site/icons/catalog-filter.svg" alt="" />
+              Фильтры
+            </h2>
+
+            <form class="filters__form" id="filters-form">
+              <details class="filters__group" open>
+                <summary class="filters__heading">Категория</summary>
+
+                <div class="filters__options">
+                  <label class="filters__option">
+                    <input
+                      type="checkbox"
+                      name="category"
+                      value="all"
+                      checked
+                    />
+                    Все категории
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="category" value="cheese" />
+                    Сыры <span>(3)</span>
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="category" value="milk" />
+                    Молоко <span>(3)</span>
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="category" value="curd" />
+                    Творог <span>(1)</span>
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="category" value="cream" />
+                    Сметана <span>(1)</span>
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="category" value="yogurt" />
+                    Йогурты <span>(2)</span>
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="category" value="butter" />
+                    Масло <span>(1)</span>
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="category" value="kefir" />
+                    Кефир <span>(1)</span>
+                  </label>
                 </div>
-            </div>
-        </section>
+              </details>
 
-        <!-- Категории -->
-        <section class="categories" aria-label="Категории продукции">
-            <div class="container categories__list">
-                <button class="categories__button categories__button--active"
-                        type="button" data-category="all" aria-pressed="true">
-                    <img class="icon" src="../site/icons/catalog-grid-white.svg" alt="">
-                    Все
-                </button>
+              <details class="filters__group" open>
+                <summary class="filters__heading">Производитель</summary>
 
-                <button class="categories__button" type="button"
-                        data-category="cheese" aria-pressed="false">
-                    <img class="categories__image" src="../site/img/catalog/categories/cheese.png" alt="">
-                    Сыры
-                </button>
-
-                <button class="categories__button" type="button"
-                        data-category="milk" aria-pressed="false">
-                    <img class="categories__image" src="../site/img/catalog/categories/milk.png" alt="Молоко">
-                    Молоко
-                </button>
-
-                <button class="categories__button" type="button"
-                        data-category="curd" aria-pressed="false">
-                    <img class="categories__image" src="../site/img/catalog/categories/curd.png" alt="Творог">
-                    Творог
-                </button>
-
-                <button class="categories__button" type="button"
-                        data-category="cream" aria-pressed="false">
-                    <img class="categories__image" src="../site/img/catalog/categories/sour-cream.png" alt="Сметана">
-                    Сметана
-                </button>
-
-                <button class="categories__button" type="button"
-                        data-category="yogurt" aria-pressed="false">
-                    <img class="categories__image" src="../site/img/catalog/categories/yogurt.png" alt="Йогурты">
-                    Йогурты
-                </button>
-
-                <button class="categories__button" type="button"
-                        data-category="butter" aria-pressed="false">
-                    <img class="categories__image" src="../site/img/catalog/categories/butter.png" alt="Масло">
-                    Масло
-                </button>
-
-                <button class="categories__button" type="button"
-                        data-category="kefir" aria-pressed="false">
-                    <img class="categories__image" src="../site/img/catalog/categories/kefir.png" alt="Кефир">
-                    Кефир
-                </button>
-            </div>
-        </section>
-
-        <!-- Фильтры и товары -->
-        <section class="catalog">
-            <div class="container catalog__layout">
-                <aside class="filters">
-                    <h2 class="filters__title">
-                        <img class="icon" src="../site/icons/catalog-filter.svg" alt="">
-                        Фильтры
-                    </h2>
-
-                    <form class="filters__form" id="filters-form">
-                        <details class="filters__group" open>
-                            <summary class="filters__heading">Категория</summary>
-
-                            <div class="filters__options">
-                                <label class="filters__option">
-                                    <input type="checkbox" name="category" value="all" checked>
-                                    Все категории
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="category" value="cheese">
-                                    Сыры <span>(3)</span>
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="category" value="milk">
-                                    Молоко <span>(3)</span>
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="category" value="curd">
-                                    Творог <span>(1)</span>
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="category" value="cream">
-                                    Сметана <span>(1)</span>
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="category" value="yogurt">
-                                    Йогурты <span>(2)</span>
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="category" value="butter">
-                                    Масло <span>(1)</span>
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="category" value="kefir">
-                                    Кефир <span>(1)</span>
-                                </label>
-                            </div>
-                        </details>
-
-                        <details class="filters__group" open>
-                            <summary class="filters__heading">Производитель</summary>
-
-                            <div class="filters__options">
-                                <label class="filters__option">
-                                    <input type="checkbox" name="producer" value="all" checked>
-                                    Все производители
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="producer" value="khakassia">
-                                    Фермеры Хакасии
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="producer" value="minusinsk">
-                                    Минусинский район
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="producer" value="uzhur">
-                                    Ужурский район
-                                </label>
-                            </div>
-                        </details>
-
-                        <details class="filters__group" open>
-                            <summary class="filters__heading">Тип продукции</summary>
-
-                            <div class="filters__options">
-                                <label class="filters__option">
-                                    <input type="checkbox" name="type" value="all" checked>
-                                    Все типы
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="type" value="classic">
-                                    Классические
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="type" value="flavored">
-                                    С добавками
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="type" value="premium">
-                                    Премиальные
-                                </label>
-                            </div>
-                        </details>
-
-                        <details class="filters__group" open>
-                            <summary class="filters__heading">Особенности</summary>
-
-                            <div class="filters__options">
-                                <label class="filters__option">
-                                    <input type="checkbox" name="feature" value="available">
-                                    Только в наличии
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="feature" value="new">
-                                    Новинки
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="feature" value="sale">
-                                    Акции
-                                </label>
-                                <label class="filters__option">
-                                    <input type="checkbox" name="feature" value="natural">
-                                    Натуральный состав
-                                </label>
-                            </div>
-                        </details>
-
-                        <button class="filters__reset" type="reset">
-                            Сбросить все фильтры
-                        </button>
-                    </form>
-                </aside>
-
-                <div class="catalog__main">
-                    <div class="catalog__toolbar">
-                        <label class="catalog__search">
-                            <img class="icon" src="../site/icons/catalog-search.svg" alt="">
-
-                            <input class="catalog__input" id="product-search"
-                                   type="search"
-                                   placeholder="Поиск по названию продукта..."
-                                   aria-label="Поиск товара">
-                        </label>
-
-                        <select class="catalog__sort" id="product-sort"
-                                aria-label="Сортировка товаров">
-                            <option value="popular">Сначала популярные</option>
-                            <option value="price-up">Сначала дешевле</option>
-                            <option value="price-down">Сначала дороже</option>
-                            <option value="name">По названию</option>
-                        </select>
-                    </div>
-
-                    <p class="catalog__message" id="catalog-message"
-                       role="status" aria-live="polite"></p>
-
-                    <div class="catalog__grid" id="product-grid">
-                        <!-- 1 -->
-                        <article class="product-card" data-id="adyghe"
-                                 data-category="cheese" data-producer="khakassia"
-                                 data-type="classic" data-price="320"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image"
-                                     src="../site/img/catalog/adyghe.png"
-                                     alt="Белый адыгейский сыр" loading="lazy">
-
-                                <span class="product-card__badge">Хит продаж</span>
-
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Сыр Адыгейский"
-                                        aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Сыр Адыгейский</h3>
-                                <p class="product-card__description">Нежный рассольный сыр с традиционным вкусом</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Хакасии</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">г. Абакан, Хакасия</p>
-                                <p class="product-card__stock">Есть в магазинах</p>
-
-                                <div class="product-card__bottom">
-                                    <div>
-                                        <p class="product-card__price">320 ₽</p>
-                                        <p class="product-card__weight">за 300 г</p>
-                                    </div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Сыр Адыгейский">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 2 -->
-                        <article class="product-card" data-id="caciotta"
-                                 data-category="cheese" data-producer="minusinsk"
-                                 data-type="premium" data-price="420"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/cheese.png"
-                                     alt="Фермерский сыр с золотистой корочкой" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Качотта фермерская" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Качотта фермерская</h3>
-                                <p class="product-card__description">Полутвёрдый сыр с насыщенным вкусом</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Минусинска</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">Минусинский район</p>
-                                <p class="product-card__stock">Есть в магазинах</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">420 ₽</p><p class="product-card__weight">за 300 г</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Качотта фермерская">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 3 -->
-                        <article class="product-card" data-id="milk"
-                                 data-category="milk" data-producer="uzhur"
-                                 data-type="classic" data-price="120"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/milk.png"
-                                     alt="Натуральное молоко в стеклянных бутылках" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Молоко 3,2%" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Молоко пастеризованное 3,2%</h3>
-                                <p class="product-card__description">Натуральное молоко с фермерских хозяйств</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Ужура</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">Ужурский район</p>
-                                <p class="product-card__stock">В наличии в сети</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">120 ₽</p><p class="product-card__weight">за 1 л</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Молоко 3,2%">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 4 -->
-                        <article class="product-card" data-id="curd"
-                                 data-category="curd" data-producer="khakassia"
-                                 data-type="classic" data-price="280"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/curd.png"
-                                     alt="Домашний творог в деревянной миске" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Творог домашний" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Творог домашний</h3>
-                                <p class="product-card__description">Рассыпчатый творог из свежего молока</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Хакасии</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">г. Абакан, Хакасия</p>
-                                <p class="product-card__stock">Есть в магазинах</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">280 ₽</p><p class="product-card__weight">за 400 г</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Творог домашний">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 5 -->
-                        <article class="product-card" data-id="cream"
-                                 data-category="cream" data-producer="minusinsk"
-                                 data-type="classic" data-price="180"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/sour-cream.png"
-                                     alt="Густая сметана в деревянной миске" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Сметана 20%" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Сметана 20%</h3>
-                                <p class="product-card__description">Натуральная сметана с нежным вкусом</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Минусинска</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">Минусинский район</p>
-                                <p class="product-card__stock">Есть в магазинах</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">180 ₽</p><p class="product-card__weight">за 300 г</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Сметана 20%">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 6 -->
-                        <article class="product-card" data-id="blueberry"
-                                 data-category="yogurt" data-producer="khakassia"
-                                 data-type="flavored" data-price="150"
-                                 data-features="available natural new">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/catalog/blueberry-yogurt.png"
-                                     alt="Черничный йогурт в стеклянных баночках" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Йогурт черничный" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Йогурт черничный</h3>
-                                <p class="product-card__description">Натуральный йогурт с лесной черникой</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Хакасии</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">г. Абакан, Хакасия</p>
-                                <p class="product-card__stock">В наличии в сети</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">150 ₽</p><p class="product-card__weight">за 250 г</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Йогурт черничный">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 7 -->
-                        <article class="product-card" data-id="strawberry"
-                                 data-category="yogurt" data-producer="uzhur"
-                                 data-type="flavored" data-price="150"
-                                 data-features="available natural new">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/catalog/strawberry-yogurt.png"
-                                     alt="Клубничный йогурт со свежими ягодами" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Йогурт клубничный" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Йогурт клубничный</h3>
-                                <p class="product-card__description">Натуральный йогурт с кусочками клубники</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Ужура</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">Ужурский район</p>
-                                <p class="product-card__stock">Есть в магазинах</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">150 ₽</p><p class="product-card__weight">за 250 г</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Йогурт клубничный">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 8 -->
-                        <article class="product-card" data-id="butter"
-                                 data-category="butter" data-producer="khakassia"
-                                 data-type="classic" data-price="380"
-                                 data-features="available natural sale">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/butter.png"
-                                     alt="Сливочное масло на деревянной доске" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Масло сливочное" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Масло сливочное</h3>
-                                <p class="product-card__description">Натуральное сливочное масло из свежих сливок</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Хакасии</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">г. Абакан, Хакасия</p>
-                                <p class="product-card__stock">Есть в магазинах</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">380 ₽</p><p class="product-card__weight">за 200 г</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Масло сливочное">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 9 -->
-                        <article class="product-card" data-id="kefir"
-                                 data-category="kefir" data-producer="minusinsk"
-                                 data-type="classic" data-price="120"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/catalog/kefir.png"
-                                     alt="Кефир в кувшине и стакане" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Кефир 2,5%" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Кефир 2,5%</h3>
-                                <p class="product-card__description">Классический кефир с живыми культурами</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Минусинска</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">Минусинский район</p>
-                                <p class="product-card__stock">В наличии в сети</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">120 ₽</p><p class="product-card__weight">за 1 л</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Кефир 2,5%">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 10 -->
-                        <article class="product-card" data-id="suluguni"
-                                 data-category="cheese" data-producer="khakassia"
-                                 data-type="classic" data-price="360"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/catalog/suluguni.png"
-                                     alt="Сулугуни с нежной слоистой текстурой" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Сыр Сулугуни" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Сыр Сулугуни</h3>
-                                <p class="product-card__description">Традиционный сыр с нежной текстурой</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Хакасии</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">г. Абакан, Хакасия</p>
-                                <p class="product-card__stock">Есть в магазинах</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">360 ₽</p><p class="product-card__weight">за 300 г</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Сыр Сулугуни">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 11 -->
-                        <article class="product-card" data-id="ryazhenka"
-                                 data-category="milk" data-producer="khakassia"
-                                 data-type="classic" data-price="150"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/catalog/ryazhenka.png"
-                                     alt="Ряженка в стеклянном кувшине" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Ряженка 4%" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Ряженка 4%</h3>
-                                <p class="product-card__description">Традиционная ряженка на топлёном молоке</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Хакасии</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">г. Абакан, Хакасия</p>
-                                <p class="product-card__stock">Есть в магазинах</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">150 ₽</p><p class="product-card__weight">за 500 г</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Ряженка 4%">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- 12 -->
-                        <article class="product-card" data-id="baked-milk"
-                                 data-category="milk" data-producer="khakassia"
-                                 data-type="classic" data-price="160"
-                                 data-features="available natural">
-                            <div class="product-card__picture">
-                                <img class="product-card__image" src="../site/img/catalog/baked-milk.png"
-                                     alt="Топлёное молоко в округлом кувшине" loading="lazy">
-                                <button class="product-card__favorite" type="button"
-                                        aria-label="В избранное: Топлёное молоко" aria-pressed="false">
-                                    <img class="icon" src="../site/icons/catalog-heart-white.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="product-card__body">
-                                <h3 class="product-card__title">Топлёное молоко</h3>
-                                <p class="product-card__description">Ароматное топлёное молоко с насыщенным вкусом</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-user-gray.svg" alt="">Фермеры Хакасии</p>
-                                <p class="product-card__detail"><img class="icon" src="../site/icons/catalog-location-gray.svg" alt="">г. Абакан, Хакасия</p>
-                                <p class="product-card__stock">В наличии в сети</p>
-                                <div class="product-card__bottom">
-                                    <div><p class="product-card__price">160 ₽</p><p class="product-card__weight">за 1 л</p></div>
-                                    <button class="product-card__cart" type="button" aria-label="В корзину: Топлёное молоко">
-                                        <img class="icon" src="../site/icons/catalog-cart-white.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <p class="catalog__empty" id="catalog-empty" hidden>
-                        Товары не найдены. Попробуйте изменить поиск или фильтры.
-                    </p>
+                <div class="filters__options">
+                  <label class="filters__option">
+                    <input
+                      type="checkbox"
+                      name="producer"
+                      value="all"
+                      checked
+                    />
+                    Все производители
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="producer" value="khakassia" />
+                    Фермеры Хакасии
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="producer" value="minusinsk" />
+                    Минусинский район
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="producer" value="uzhur" />
+                    Ужурский район
+                  </label>
                 </div>
-            </div>
-        </section>
+              </details>
 
-        <!-- Преимущества -->
-        <section class="benefits">
-            <div class="container">
-                <h2 class="benefits__title">Почему выбирают нашу продукцию?</h2>
+              <details class="filters__group" open>
+                <summary class="filters__heading">Тип продукции</summary>
 
-                <div class="benefits__list">
-                    <div class="benefits__item">
-                        <span class="benefits__icon">
-                            <img class="icon" src="../site/icons/catalog-leaf.svg" alt="">
-                        </span>
-                        <div>
-                            <h3 class="benefits__heading">Натуральный состав</h3>
-                            <p class="benefits__text">Без искусственных добавок и консервантов</p>
-                        </div>
-                    </div>
-
-                    <div class="benefits__item">
-                        <span class="benefits__icon">
-                            <img class="icon" src="../site/icons/catalog-farmer.svg" alt="">
-                        </span>
-                        <div>
-                            <h3 class="benefits__heading">Местные производители</h3>
-                            <p class="benefits__text">Фермеры Хакасии и Минусинского района</p>
-                        </div>
-                    </div>
-
-                    <div class="benefits__item">
-                        <span class="benefits__icon">
-                            <img class="icon" src="../site/icons/catalog-truck.svg" alt="">
-                        </span>
-                        <div>
-                            <h3 class="benefits__heading">Свежая поставка</h3>
-                            <p class="benefits__text">Регулярное пополнение в магазинах</p>
-                        </div>
-                    </div>
-
-                    <div class="benefits__item">
-                        <span class="benefits__icon">
-                            <img class="icon" src="../site/icons/catalog-heart.svg" alt="">
-                        </span>
-                        <div>
-                            <h3 class="benefits__heading">Настоящий вкус</h3>
-                            <p class="benefits__text">Традиционные технологии и забота о качестве</p>
-                        </div>
-                    </div>
+                <div class="filters__options">
+                  <label class="filters__option">
+                    <input type="checkbox" name="type" value="all" checked />
+                    Все типы
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="type" value="classic" />
+                    Классические
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="type" value="flavored" />
+                    С добавками
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="type" value="premium" />
+                    Премиальные
+                  </label>
                 </div>
-            </div>
-        </section>
+              </details>
 
-        <!-- Магазины -->
-        <section class="store-banner">
-            <div class="container">
-                <div class="store-banner__inner">
-                    <div class="store-banner__content">
-                        <p class="store-banner__label">Не знаете, где купить?</p>
-                        <h2 class="store-banner__title">Найдите ближайшую точку сети</h2>
-                        <p class="store-banner__text">
-                            7 магазинов с фермерской молочной продукцией
-                            в удобных районах города.
-                        </p>
+              <details class="filters__group" open>
+                <summary class="filters__heading">Особенности</summary>
 
-                        <a class="button" href="index.html#stores">
-                            Посмотреть все магазины
-                            <img class="icon" src="../site/icons/catalog-arrow-white.svg" alt="">
-                        </a>
-                    </div>
-
-                    <div class="store-banner__photo">
-                        <img src="../site/img/store-1.png"
-                             alt="Магазин фермерской молочной продукции"
-                             loading="lazy">
-                        <p>Всегда рядом с вами! ♡</p>
-                    </div>
+                <div class="filters__options">
+                  <label class="filters__option">
+                    <input type="checkbox" name="feature" value="available" />
+                    Только в наличии
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="feature" value="new" />
+                    Новинки
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="feature" value="sale" />
+                    Акции
+                  </label>
+                  <label class="filters__option">
+                    <input type="checkbox" name="feature" value="natural" />
+                    Натуральный состав
+                  </label>
                 </div>
+              </details>
+
+              <button class="filters__reset" type="reset">
+                Сбросить все фильтры
+              </button>
+            </form>
+          </aside>
+
+          <div class="catalog__main">
+            <div class="catalog__toolbar">
+              <label class="catalog__search">
+                <img
+                  class="icon"
+                  src="../site/icons/catalog-search.svg"
+                  alt=""
+                />
+
+                <input
+                  class="catalog__input"
+                  id="product-search"
+                  type="search"
+                  placeholder="Поиск по названию продукта..."
+                  aria-label="Поиск товара"
+                />
+              </label>
+
+              <select
+                class="catalog__sort"
+                id="product-sort"
+                aria-label="Сортировка товаров"
+              >
+                <option value="popular">Сначала популярные</option>
+                <option value="price-up">Сначала дешевле</option>
+                <option value="price-down">Сначала дороже</option>
+                <option value="name">По названию</option>
+              </select>
             </div>
-        </section>
+
+            <p
+              class="catalog__message"
+              id="catalog-message"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+            <div class="catalog__grid" id="product-grid">
+              <!-- 1 -->
+              <article
+                class="product-card"
+                data-id="adyghe"
+                data-category="cheese"
+                data-producer="khakassia"
+                data-type="classic"
+                data-price="320"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/catalog/adyghe.png"
+                    alt="Белый адыгейский сыр"
+                    loading="lazy"
+                  />
+
+                  <span class="product-card__badge">Хит продаж</span>
+
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Сыр Адыгейский"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Сыр Адыгейский</h3>
+                  <p class="product-card__description">
+                    Нежный рассольный сыр с традиционным вкусом
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Хакасии
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />г. Абакан, Хакасия
+                  </p>
+                  <p class="product-card__stock">Есть в магазинах</p>
+
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">320 ₽</p>
+                      <p class="product-card__weight">за 300 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Сыр Адыгейский"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 2 -->
+              <article
+                class="product-card"
+                data-id="caciotta"
+                data-category="cheese"
+                data-producer="minusinsk"
+                data-type="premium"
+                data-price="420"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/cheese.png"
+                    alt="Фермерский сыр с золотистой корочкой"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Качотта фермерская"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Качотта фермерская</h3>
+                  <p class="product-card__description">
+                    Полутвёрдый сыр с насыщенным вкусом
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Минусинска
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />Минусинский район
+                  </p>
+                  <p class="product-card__stock">Есть в магазинах</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">420 ₽</p>
+                      <p class="product-card__weight">за 300 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Качотта фермерская"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 3 -->
+              <article
+                class="product-card"
+                data-id="milk"
+                data-category="milk"
+                data-producer="uzhur"
+                data-type="classic"
+                data-price="120"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/milk.png"
+                    alt="Натуральное молоко в стеклянных бутылках"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Молоко 3,2%"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">
+                    Молоко пастеризованное 3,2%
+                  </h3>
+                  <p class="product-card__description">
+                    Натуральное молоко с фермерских хозяйств
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Ужура
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />Ужурский район
+                  </p>
+                  <p class="product-card__stock">В наличии в сети</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">120 ₽</p>
+                      <p class="product-card__weight">за 1 л</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Молоко 3,2%"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 4 -->
+              <article
+                class="product-card"
+                data-id="curd"
+                data-category="curd"
+                data-producer="khakassia"
+                data-type="classic"
+                data-price="280"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/curd.png"
+                    alt="Домашний творог в деревянной миске"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Творог домашний"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Творог домашний</h3>
+                  <p class="product-card__description">
+                    Рассыпчатый творог из свежего молока
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Хакасии
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />г. Абакан, Хакасия
+                  </p>
+                  <p class="product-card__stock">Есть в магазинах</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">280 ₽</p>
+                      <p class="product-card__weight">за 400 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Творог домашний"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 5 -->
+              <article
+                class="product-card"
+                data-id="cream"
+                data-category="cream"
+                data-producer="minusinsk"
+                data-type="classic"
+                data-price="180"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/sour-cream.png"
+                    alt="Густая сметана в деревянной миске"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Сметана 20%"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Сметана 20%</h3>
+                  <p class="product-card__description">
+                    Натуральная сметана с нежным вкусом
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Минусинска
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />Минусинский район
+                  </p>
+                  <p class="product-card__stock">Есть в магазинах</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">180 ₽</p>
+                      <p class="product-card__weight">за 300 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Сметана 20%"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 6 -->
+              <article
+                class="product-card"
+                data-id="blueberry"
+                data-category="yogurt"
+                data-producer="khakassia"
+                data-type="flavored"
+                data-price="150"
+                data-features="available natural new"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/catalog/blueberry-yogurt.png"
+                    alt="Черничный йогурт в стеклянных баночках"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Йогурт черничный"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Йогурт черничный</h3>
+                  <p class="product-card__description">
+                    Натуральный йогурт с лесной черникой
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Хакасии
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />г. Абакан, Хакасия
+                  </p>
+                  <p class="product-card__stock">В наличии в сети</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">150 ₽</p>
+                      <p class="product-card__weight">за 250 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Йогурт черничный"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 7 -->
+              <article
+                class="product-card"
+                data-id="strawberry"
+                data-category="yogurt"
+                data-producer="uzhur"
+                data-type="flavored"
+                data-price="150"
+                data-features="available natural new"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/catalog/strawberry-yogurt.png"
+                    alt="Клубничный йогурт со свежими ягодами"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Йогурт клубничный"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Йогурт клубничный</h3>
+                  <p class="product-card__description">
+                    Натуральный йогурт с кусочками клубники
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Ужура
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />Ужурский район
+                  </p>
+                  <p class="product-card__stock">Есть в магазинах</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">150 ₽</p>
+                      <p class="product-card__weight">за 250 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Йогурт клубничный"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 8 -->
+              <article
+                class="product-card"
+                data-id="butter"
+                data-category="butter"
+                data-producer="khakassia"
+                data-type="classic"
+                data-price="380"
+                data-features="available natural sale"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/butter.png"
+                    alt="Сливочное масло на деревянной доске"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Масло сливочное"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Масло сливочное</h3>
+                  <p class="product-card__description">
+                    Натуральное сливочное масло из свежих сливок
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Хакасии
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />г. Абакан, Хакасия
+                  </p>
+                  <p class="product-card__stock">Есть в магазинах</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">380 ₽</p>
+                      <p class="product-card__weight">за 200 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Масло сливочное"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 9 -->
+              <article
+                class="product-card"
+                data-id="kefir"
+                data-category="kefir"
+                data-producer="minusinsk"
+                data-type="classic"
+                data-price="120"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/catalog/kefir.png"
+                    alt="Кефир в кувшине и стакане"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Кефир 2,5%"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Кефир 2,5%</h3>
+                  <p class="product-card__description">
+                    Классический кефир с живыми культурами
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Минусинска
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />Минусинский район
+                  </p>
+                  <p class="product-card__stock">В наличии в сети</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">120 ₽</p>
+                      <p class="product-card__weight">за 1 л</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Кефир 2,5%"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 10 -->
+              <article
+                class="product-card"
+                data-id="suluguni"
+                data-category="cheese"
+                data-producer="khakassia"
+                data-type="classic"
+                data-price="360"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/catalog/suluguni.png"
+                    alt="Сулугуни с нежной слоистой текстурой"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Сыр Сулугуни"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Сыр Сулугуни</h3>
+                  <p class="product-card__description">
+                    Традиционный сыр с нежной текстурой
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Хакасии
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />г. Абакан, Хакасия
+                  </p>
+                  <p class="product-card__stock">Есть в магазинах</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">360 ₽</p>
+                      <p class="product-card__weight">за 300 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Сыр Сулугуни"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 11 -->
+              <article
+                class="product-card"
+                data-id="ryazhenka"
+                data-category="milk"
+                data-producer="khakassia"
+                data-type="classic"
+                data-price="150"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/catalog/ryazhenka.png"
+                    alt="Ряженка в стеклянном кувшине"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Ряженка 4%"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Ряженка 4%</h3>
+                  <p class="product-card__description">
+                    Традиционная ряженка на топлёном молоке
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Хакасии
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />г. Абакан, Хакасия
+                  </p>
+                  <p class="product-card__stock">Есть в магазинах</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">150 ₽</p>
+                      <p class="product-card__weight">за 500 г</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Ряженка 4%"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 12 -->
+              <article
+                class="product-card"
+                data-id="baked-milk"
+                data-category="milk"
+                data-producer="khakassia"
+                data-type="classic"
+                data-price="160"
+                data-features="available natural"
+              >
+                <div class="product-card__picture">
+                  <img
+                    class="product-card__image"
+                    src="../site/img/catalog/baked-milk.png"
+                    alt="Топлёное молоко в округлом кувшине"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__favorite"
+                    type="button"
+                    aria-label="В избранное: Топлёное молоко"
+                    aria-pressed="false"
+                  >
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-heart-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__title">Топлёное молоко</h3>
+                  <p class="product-card__description">
+                    Ароматное топлёное молоко с насыщенным вкусом
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-user-gray.svg"
+                      alt=""
+                    />Фермеры Хакасии
+                  </p>
+                  <p class="product-card__detail">
+                    <img
+                      class="icon"
+                      src="../site/icons/catalog-location-gray.svg"
+                      alt=""
+                    />г. Абакан, Хакасия
+                  </p>
+                  <p class="product-card__stock">В наличии в сети</p>
+                  <div class="product-card__bottom">
+                    <div>
+                      <p class="product-card__price">160 ₽</p>
+                      <p class="product-card__weight">за 1 л</p>
+                    </div>
+                    <button
+                      class="product-card__cart"
+                      type="button"
+                      aria-label="В корзину: Топлёное молоко"
+                    >
+                      <img
+                        class="icon"
+                        src="../site/icons/catalog-cart-white.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <p class="catalog__empty" id="catalog-empty" hidden>
+              Товары не найдены. Попробуйте изменить поиск или фильтры.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Преимущества -->
+      <section class="benefits">
+        <div class="container">
+          <h2 class="benefits__title">Почему выбирают нашу продукцию?</h2>
+
+          <div class="benefits__list">
+            <div class="benefits__item">
+              <span class="benefits__icon">
+                <img class="icon" src="../site/icons/catalog-leaf.svg" alt="" />
+              </span>
+              <div>
+                <h3 class="benefits__heading">Натуральный состав</h3>
+                <p class="benefits__text">
+                  Без искусственных добавок и консервантов
+                </p>
+              </div>
+            </div>
+
+            <div class="benefits__item">
+              <span class="benefits__icon">
+                <img
+                  class="icon"
+                  src="../site/icons/catalog-farmer.svg"
+                  alt=""
+                />
+              </span>
+              <div>
+                <h3 class="benefits__heading">Местные производители</h3>
+                <p class="benefits__text">
+                  Фермеры Хакасии и Минусинского района
+                </p>
+              </div>
+            </div>
+
+            <div class="benefits__item">
+              <span class="benefits__icon">
+                <img
+                  class="icon"
+                  src="../site/icons/catalog-truck.svg"
+                  alt=""
+                />
+              </span>
+              <div>
+                <h3 class="benefits__heading">Свежая поставка</h3>
+                <p class="benefits__text">Регулярное пополнение в магазинах</p>
+              </div>
+            </div>
+
+            <div class="benefits__item">
+              <span class="benefits__icon">
+                <img
+                  class="icon"
+                  src="../site/icons/catalog-heart.svg"
+                  alt=""
+                />
+              </span>
+              <div>
+                <h3 class="benefits__heading">Настоящий вкус</h3>
+                <p class="benefits__text">
+                  Традиционные технологии и забота о качестве
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Магазины -->
+      <section class="store-banner">
+        <div class="container">
+          <div class="store-banner__inner">
+            <div class="store-banner__content">
+              <p class="store-banner__label">Не знаете, где купить?</p>
+              <h2 class="store-banner__title">Найдите ближайшую точку сети</h2>
+              <p class="store-banner__text">
+                7 магазинов с фермерской молочной продукцией в удобных районах
+                города.
+              </p>
+
+              <a class="button" href="index.html#stores">
+                Посмотреть все магазины
+                <img
+                  class="icon"
+                  src="../site/icons/catalog-arrow-white.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <div class="store-banner__photo">
+              <img
+                src="../site/img/store-1.png"
+                alt="Магазин фермерской молочной продукции"
+                loading="lazy"
+              />
+              <p>Всегда рядом с вами! ♡</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Подвал -->
     <footer class="footer" id="contacts">
-        <div class="container">
-            <div class="footer__top">
-                <a class="footer__brand" href="index.html">
-                    <img class="footer__logo" src="../site/img/logo.png" alt="">
-                    <div>
-                        <p class="footer__name">Буренка от Solomona</p>
-                        <p class="footer__description">
-                            Фермерская молочная продукция<br>
-                            из Хакасии и Минусинска
-                        </p>
-                    </div>
-                </a>
-
-                <nav class="footer__navigation" aria-label="Меню в подвале">
-                    <a href="catalog.html">Каталог</a>
-                    <a href="index.html#stores">Магазины</a>
-                    <a href="index.html#about">О продукции</a>
-                    <a href="company.html">Производители</a>
-                    <a href="sales.html">Акции</a>
-                    <a href="partner.html">Для бизнеса</a>
-                </nav>
-
-                <div class="footer__contacts">
-                    <p class="footer__location">
-                        <img class="icon" src="../site/icons/catalog-location-white.svg" alt="">
-                        г. Абакан, Хакасия
-                    </p>
-
-                    <a class="button button--light" href="index.html#contacts">
-                        Связаться с нами
-                    </a>
-                </div>
+      <div class="container">
+        <div class="footer__top">
+          <a class="footer__brand" href="index.html">
+            <img class="footer__logo" src="../site/img/logo.png" alt="" />
+            <div>
+              <p class="footer__name">Буренка от Solomona</p>
+              <p class="footer__description">
+                Фермерская молочная продукция<br />
+                из Хакасии и Минусинска
+              </p>
             </div>
+          </a>
 
-            <div class="footer__bottom">
-                <p>© 2026 Буренка от Solomona. Все права защищены.</p>
-                <p>Натурально. Вкусно. С любовью из Хакасии. ♡</p>
-            </div>
+          <nav class="footer__navigation" aria-label="Меню в подвале">
+            <a href="catalog.html">Каталог</a>
+            <a href="index.html#stores">Магазины</a>
+            <a href="about.html">О компании</a>
+            <a href="sales.html">Акции</a>
+            <a href="partner.html">Для бизнеса</a>
+          </nav>
+
+          <div class="footer__contacts">
+            <p class="footer__location">
+              <img
+                class="icon"
+                src="../site/icons/catalog-location-white.svg"
+                alt=""
+              />
+              г. Абакан, Хакасия
+            </p>
+
+            <a class="button button--light" href="index.html#contacts">
+              Связаться с нами
+            </a>
+          </div>
         </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Буренка от Solomona. Все права защищены.</p>
+          <p>Натурально. Вкусно. С любовью из Хакасии. ♡</p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

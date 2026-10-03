@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании — Буренка от Solomona</title>
+    <link rel="stylesheet" href="../site/css/catalog.css">
+    <link rel="stylesheet" href="../site/css/about.css">
+    <script src="../site/scripts/about.js" defer></script>
+</head>
+<body>
+<header class="header">
+        <div class="container header__inner">
+            <a class="header__logo" href="home.html" aria-label="На главную">
+                <img src="../site/img/logo.png" alt="Буренка от Solomona">
+            </a>
+
+            <nav class="navigation" id="navigation" aria-label="Основное меню">
+                <a class="navigation__link"
+                   href="catalog.html">Каталог</a>
+
+                <a class="navigation__link" href="home.html#stores">Магазины</a>
+                <a class="navigation__link navigation__link--active" href="about.html" aria-current="page">О компании</a>
+                <a class="navigation__link" href="sales.html">Акции</a>
+                <a class="navigation__link" href="partner.html">Для бизнеса</a>
+                <a class="navigation__link" href="#contacts">Контакты</a>
+            </nav>
+
+            <a class="button header__button" href="home.html#stores">
+                <img class="icon" src="../site/icons/catalog-location-white.svg" alt="">
+                <span>Найти магазин</span>
+            </a>
+
+            <button class="header__menu" type="button"
+                    aria-label="Открыть меню"
+                    aria-controls="navigation"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+<main>
+    <!-- Главный экран -->
+    <section class="about-hero">
+        <img class="about-hero__image" src="../site/img/about/about-hero.png"
+             alt="Корова на лугу у подножия гор" fetchpriority="high">
+        <div class="container about-hero__inner">
+            <div class="about-hero__content">
+                <nav class="about-hero__breadcrumbs" aria-label="Хлебные крошки">
+                    <a href="home.html">Главная</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page">О компании</span>
+                </nav>
+                <h1 class="about-hero__title">О компании</h1>
+                <p class="about-hero__description">
+                    «Бурёнка от Solomona» — сеть магазинов натуральных продуктов
+                    из Хакасии с любовью к настоящему вкусу, людям и родному региону.
+                </p>
+            </div>
+            <p class="about-hero__note">Натуральные продукты<br>из Хакасии</p>
+        </div>
+    </section>
+
+    <!-- Компания в цифрах -->
+    <section class="about-stats" aria-label="Компания в цифрах">
+        <div class="container">
+            <div class="about-stats__list">
+                <div class="about-stats__item">
+                    <p class="about-stats__number">6+</p>
+                    <p class="about-stats__text">магазинов<br>в сети</p>
+                </div>
+                <div class="about-stats__item">
+                    <p class="about-stats__number">100+</p>
+                    <p class="about-stats__text">натуральных<br>продуктов</p>
+                </div>
+                <div class="about-stats__item">
+                    <p class="about-stats__text">Работаем</p>
+                    <p class="about-stats__year">С 2018 года</p>
+                    <p class="about-stats__text">для жителей<br>Хакасии</p>
+                </div>
+                <div class="about-stats__item">
+                    <span class="about-stats__icon">
+                        <img src="../site/icons/home-people-dark.svg" alt="">
+                    </span>
+                    <p class="about-stats__text">Тысячи довольных<br>покупателей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- История компании -->
+    <section class="about-history" id="about-history">
+        <div class="container about-history__inner">
+            <img class="about-history__image" src="../site/img/about/about-history.png"
+                 alt="Молоко Буренка от Solomona, творог и фермерский сыр" loading="lazy">
+            <div class="about-history__content">
+                <p class="about-section__label">Наша история</p>
+                <h2 class="about-section__title">С любовью<br>к натуральному</h2>
+                <p class="about-history__text">
+                    Мы создали «Бурёнку от Solomona», чтобы качественные и натуральные
+                    продукты были доступны каждому. Сотрудничаем с проверенными
+                    фермерскими хозяйствами Хакасии, Алтая, Красноярского края и других регионов.
+                    Лично отбираем производителей и контролируем качество на всех этапах —
+                    от фермы до полок наших магазинов.
+                </p>
+            
+        </div>
+    </section>
+
+    <!-- Ценности -->
+    <section class="about-values">
+        <div class="container">
+            <p class="about-section__label">Наши ценности</p>
+            <h2 class="about-section__title">То, во что мы верим</h2>
+            <div class="about-values__list">
+                <article class="about-values__card">
+                    <span class="about-values__icon"><img src="../site/icons/home-leaf-dark.svg" alt=""></span>
+                    <h3 class="about-values__title">Натуральность</h3>
+                    <p class="about-values__text">Только качественные и натуральные продукты без заменителей</p>
+                </article>
+                <article class="about-values__card">
+                    <span class="about-values__icon"><img src="../site/icons/home-heart-dark.svg" alt=""></span>
+                    <h3 class="about-values__title">Честность</h3>
+                    <p class="about-values__text">Прозрачные условия с производителями и покупателями</p>
+                </article>
+                <article class="about-values__card">
+                    <span class="about-values__icon"><img src="../site/icons/home-shop.svg" alt=""></span>
+                    <h3 class="about-values__title">Поддержка фермеров</h3>
+                    <p class="about-values__text">Развиваем локальные хозяйства и региональное производство</p>
+                </article>
+                <article class="about-values__card">
+                    <span class="about-values__icon"><img src="../site/icons/home-people-dark.svg" alt=""></span>
+                    <h3 class="about-values__title">Забота о людях</h3>
+                    <p class="about-values__text">Делаем полезные продукты доступными для каждой семьи</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Этапы работы -->
+    <section class="about-process" id="about-process">
+        <div class="container">
+            <p class="about-section__label">Как мы работаем</p>
+<h2 class="about-section__title">От фермы до вашего стола</h2>
+            <p class="about-process__description">
+                Выбираем лучших производителей, контролируем качество
+                и привозим свежие продукты в наши магазины.
+            </p>
+            <ol class="about-process__list">
+                <li class="about-process__item">
+                    <div class="about-process__photo">
+                        <img class="about-process__image" src="../site/img/about/about-farm.png" alt="Коровы на горном пастбище" loading="lazy">
+                        <span class="about-process__number" aria-hidden="true">1</span>
+                    </div>
+                    <h3 class="about-process__title">Отбор фермеров</h3>
+                    <p class="about-process__text">Работаем с проверенными хозяйствами</p>
+                </li>
+                <li class="about-process__item">
+                    <div class="about-process__photo">
+                        <img class="about-process__image" src="../site/img/about/about-quality.png" alt="Оборудование молочного производства" loading="lazy">
+                        <span class="about-process__number" aria-hidden="true">2</span>
+                    </div>
+                    <h3 class="about-process__title">Контроль качества</h3>
+                    <p class="about-process__text">Проверяем продукцию на каждом этапе</p>
+                </li>
+                <li class="about-process__item">
+                    <div class="about-process__photo">
+                        <img class="about-process__image" src="../site/img/about/about-cheese.png" alt="Фермерский сыр на деревянных полках" loading="lazy">
+                        <span class="about-process__number" aria-hidden="true">3</span>
+                    </div>
+                    <h3 class="about-process__title">Собственная логистика</h3>
+                    <p class="about-process__text">Доставляем свежие продукты в магазины</p>
+                </li>
+                <li class="about-process__item">
+                    <div class="about-process__photo">
+                        <img class="about-process__image" src="../site/img/store-1.png" alt="Магазин фермерских молочных продуктов" loading="lazy">
+                        <span class="about-process__number" aria-hidden="true">4</span>
+                    </div>
+                    <h3 class="about-process__title">Наши магазины</h3>
+                    <p class="about-process__text">Предлагаем вам только лучшее</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Цель компании -->
+    <section class="about-mission">
+        <img class="about-mission__image" src="../site/img/about/about-mission.png"
+             alt="Ребёнок пьёт молоко из стакана" loading="lazy">
+        <div class="container about-mission__inner">
+            <div class="about-mission__content">
+                <p class="about-section__label about-section__label--light">Наша цель</p>
+                <h2 class="about-mission__title">Больше натуральных продуктов в каждом доме</h2>
+                <p class="about-mission__text">
+                    Мы развиваемся, открываем новые магазины и расширяем ассортимент,
+                    чтобы всё больше людей могли выбирать натуральные, вкусные и полезные
+                    продукты из проверенных фермерских хозяйств.
+                </p>
+                <a class="button about-mission__button" href="home.html#stores">Наши магазины</a>
+            </div>
+            <p class="about-mission__note">Вкус настоящей<br>жизни</p>
+        </div>
+    </section>
+</main>
+<footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer__top">
+                <a class="footer__brand" href="home.html">
+                    <img class="footer__logo" src="../site/img/logo.png" alt="">
+                    <div>
+                        <p class="footer__name">Буренка от Solomona</p>
+                        <p class="footer__description">
+                            Фермерская молочная продукция<br>
+                            из Хакасии и Минусинска
+                        </p>
+                    </div>
+                </a>
+
+                <nav class="footer__navigation" aria-label="Меню в подвале">
+                    <a href="catalog.html">Каталог</a>
+                    <a href="home.html#stores">Магазины</a>
+                    <a href="about.html">О компании</a>
+                    <a href="sales.html">Акции</a>
+                    <a href="partner.html">Для бизнеса</a>
+                </nav>
+
+                <div class="footer__contacts">
+                    <p class="footer__location">
+                        <img class="icon" src="../site/icons/catalog-location-white.svg" alt="">
+                        г. Абакан, Хакасия
+                    </p>
+
+                    <a class="button button--light" href="home.html#contacts">
+                        Связаться с нами
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2026 Буренка от Solomona. Все права защищены.</p>
+                <p>Натурально. Вкусно. С любовью из Хакасии. ♡</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,231 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Акции — Буренка от Solomona</title>
-    <link rel="stylesheet" href="../site/css/catalog.css">
-    <link rel="stylesheet" href="../site/css/sales.css">
+    <link rel="stylesheet" href="../site/css/catalog.css" />
+    <link rel="stylesheet" href="../site/css/sales.css" />
     <script src="../site/scripts/sales.js" defer></script>
-</head>
-<body>
-<header class="header">
-        <div class="container header__inner">
-            <a class="header__logo" href="home.html" aria-label="На главную">
-                <img src="../site/img/logo.png" alt="Буренка от Solomona">
-            </a>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="header__logo" href="home.html" aria-label="На главную">
+          <img src="../site/img/logo.png" alt="Буренка от Solomona" />
+        </a>
 
-            <nav class="navigation" id="navigation" aria-label="Основное меню">
-                <a class="navigation__link"
-                   href="catalog.html">Каталог</a>
+        <nav class="navigation" id="navigation" aria-label="Основное меню">
+          <a class="navigation__link" href="catalog.html">Каталог</a>
 
-                <a class="navigation__link" href="home.html#stores">Магазины</a>
-                <a class="navigation__link" href="home.html#about">О продукции</a>
-                <a class="navigation__link" href="company.html">Производители</a>
-                <a class="navigation__link navigation__link--active" href="sales.html" aria-current="page">Акции</a>
-                <a class="navigation__link" href="partner.html">Для бизнеса</a>
-                <a class="navigation__link" href="#contacts">Контакты</a>
-            </nav>
+          <a class="navigation__link" href="home.html#stores">Магазины</a>
+          <a class="navigation__link" href="about.html">О компании</a>
+          <a
+            class="navigation__link navigation__link--active"
+            href="sales.html"
+            aria-current="page"
+            >Акции</a
+          >
+          <a class="navigation__link" href="partner.html">Для бизнеса</a>
+          <a class="navigation__link" href="#contacts">Контакты</a>
+        </nav>
 
-            <a class="button header__button" href="home.html#stores">
-                <img class="icon" src="../site/icons/catalog-location-white.svg" alt="">
-                <span>Найти магазин</span>
-            </a>
+        <a class="button header__button" href="home.html#stores">
+          <img
+            class="icon"
+            src="../site/icons/catalog-location-white.svg"
+            alt=""
+          />
+          <span>Найти магазин</span>
+        </a>
 
-            <button class="header__menu" type="button"
-                    aria-label="Открыть меню"
-                    aria-controls="navigation"
-                    aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+        <button
+          class="header__menu"
+          type="button"
+          aria-label="Открыть меню"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
-<main>
-    <!-- Главный экран -->
-    <section class="sales-hero">
-        <img class="sales-hero__image"
-             src="../site/img/promotions/promotions-hero.png"
-             alt="" fetchpriority="high">
+    <main>
+      <!-- Главный экран -->
+      <section class="sales-hero">
+        <img
+          class="sales-hero__image"
+          src="../site/img/promotions/promotions-hero.png"
+          alt=""
+          fetchpriority="high"
+        />
 
         <div class="container sales-hero__inner">
-            <div class="sales-hero__content">
-                <nav class="sales-hero__breadcrumbs" aria-label="Хлебные крошки">
-                    <a href="home.html">Главная</a>
-                    <span aria-hidden="true">/</span>
-                    <span aria-current="page">Акции</span>
-                </nav>
-                <h1 class="sales-hero__title">Акции</h1>
-                <p class="sales-hero__description">
-                    Специальные предложения, новинки и сезонные
-                    продукты в наших магазинах.
-                </p>
-            </div>
+          <div class="sales-hero__content">
+            <nav class="sales-hero__breadcrumbs" aria-label="Хлебные крошки">
+              <a href="home.html">Главная</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Акции</span>
+            </nav>
+            <h1 class="sales-hero__title">Акции</h1>
+            <p class="sales-hero__description">
+              Специальные предложения, новинки и сезонные продукты в наших
+              магазинах.
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Предложения -->
-    <section class="sales" aria-label="Акции и специальные предложения">
+      <!-- Предложения -->
+      <section class="sales" aria-label="Акции и специальные предложения">
         <div class="container sales__list">
-            <!-- Сырная неделя -->
-            <article class="sale-card">
-                <img class="sale-card__image"
-                     src="../site/img/promotions/cheese-week.png"
-                     alt="Фермерские сыры на деревянной доске" loading="lazy">
+          <!-- Сырная неделя -->
+          <article class="sale-card">
+            <img
+              class="sale-card__image"
+              src="../site/img/promotions/cheese-week.png"
+              alt="Фермерские сыры на деревянной доске"
+              loading="lazy"
+            />
 
-                <div class="sale-card__content">
-                    <p class="sale-card__label">С 1 по 15 ноября</p>
-                    <h2 class="sale-card__title">Сырная неделя</h2>
-                    <p class="sale-card__description">Скидка 15% на все фермерские сыры собственного и регионального производства.</p>
-                    <a class="button sale-card__button" href="catalog.html">Смотреть ассортимент</a>
-                </div>
-
-                <div class="sale-card__badge">
-                    <span class="sale-card__discount">−15%</span>
-                    <span class="sale-card__badge-text">На все<br>сыры</span>
-                </div>
-            </article>
-
-            <!-- Домашние йогурты -->
-            <article class="sale-card">
-                <img class="sale-card__image"
-                     src="../site/img/promotions/homemade-yogurt.png"
-                     alt="Домашние йогурты с ягодами" loading="lazy">
-
-                <div class="sale-card__content">
-                    <p class="sale-card__label">Новинка</p>
-                    <h2 class="sale-card__title">Домашние йогурты</h2>
-                    <p class="sale-card__description">Новые вкусы от фермерских хозяйств Хакасии. Натуральный состав, без добавок и консервантов.</p>
-                    <a class="button sale-card__button" href="catalog.html">Смотреть йогурты</a>
-                </div>
-
-                <div class="sale-card__badge sale-card__badge--green">
-                    
-                    <span class="sale-card__badge-text">Новые<br>вкусы</span>
-                </div>
-            </article>
-
-            <!-- Свежее деревенское молоко -->
-            <article class="sale-card">
-                <img class="sale-card__image"
-                     src="../site/img/promotions/fresh-milk.png"
-                     alt="Бутылка и стакан свежего молока" loading="lazy">
-
-                <div class="sale-card__content">
-                    <p class="sale-card__label">Сезонное предложение</p>
-                    <h2 class="sale-card__title">Свежее деревенское молоко</h2>
-                    <p class="sale-card__description">Каждый день в наших магазинах. Натуральное молоко от проверенных фермеров.</p>
-                    <a class="button sale-card__button" href="catalog.html">Подробнее</a>
-                </div>
-
-                <div class="sale-card__badge sale-card__badge--green">
-                    
-                    <span class="sale-card__badge-text">Натуральное<br>молоко<br>каждый день</span>
-                </div>
-            </article>
-
-            <!-- Сахалинское масло -->
-            <article class="sale-card">
-                <img class="sale-card__image"
-                     src="../site/img/promotions/butter-offer.png"
-                     alt="Сливочное масло на деревянной доске" loading="lazy">
-
-                <div class="sale-card__content">
-                    <p class="sale-card__label">До 30 ноября</p>
-                    <h2 class="sale-card__title">Сахалинское масло</h2>
-                    <p class="sale-card__description">Сливочное масло высшего качества по специальной цене.</p>
-                    <a class="button sale-card__button" href="catalog.html">Смотреть товар</a>
-                </div>
-
-                <div class="sale-card__badge">
-                    
-                    <span class="sale-card__badge-text">Выгодная<br>цена</span>
-                </div>
-            </article>
-
-            <!-- Семейная корзина -->
-            <article class="sale-card">
-                <img class="sale-card__image"
-                     src="../site/img/promotions/family-basket.png"
-                     alt="Семейный набор молочных продуктов и яиц" loading="lazy">
-
-                <div class="sale-card__content">
-                    <p class="sale-card__label">Набор недели</p>
-                    <h2 class="sale-card__title">Семейная корзина</h2>
-                    <p class="sale-card__description">Молоко, творог, сметана, яйца и йогурт по выгодной цене.</p>
-                    <a class="button sale-card__button" href="catalog.html">Смотреть набор</a>
-                </div>
-
-                <div class="sale-card__badge">
-                    
-                    <span class="sale-card__badge-text">Полный набор<br>для семьи</span>
-                </div>
-            </article>
-
-            <!-- Фермерский творог -->
-            <article class="sale-card">
-                <img class="sale-card__image"
-                     src="../site/img/promotions/farm-curd.png"
-                     alt="Фермерский творог в деревянной миске" loading="lazy">
-
-                <div class="sale-card__content">
-                    <p class="sale-card__label">Сезонное</p>
-                    <h2 class="sale-card__title">Фермерский творог</h2>
-                    <p class="sale-card__description">Традиционный вкус и натуральный состав. Скидка 10% на весь творог.</p>
-                    <a class="button sale-card__button" href="catalog.html">Смотреть творог</a>
-                </div>
-
-                <div class="sale-card__badge">
-                    <span class="sale-card__discount">−10%</span>
-                    <span class="sale-card__badge-text">На весь<br>творог</span>
-                </div>
-            </article>
-        </div>
-    </section>
-</main>
-
-<footer class="footer" id="contacts">
-        <div class="container">
-            <div class="footer__top">
-                <a class="footer__brand" href="index.html">
-                    <img class="footer__logo" src="../site/img/logo.png" alt="">
-                    <div>
-                        <p class="footer__name">Буренка от Solomona</p>
-                        <p class="footer__description">
-                            Фермерская молочная продукция<br>
-                            из Хакасии и Минусинска
-                        </p>
-                    </div>
-                </a>
-
-                <nav class="footer__navigation" aria-label="Меню в подвале">
-                    <a href="catalog.html">Каталог</a>
-                    <a href="index.html#stores">Магазины</a>
-                    <a href="index.html#about">О продукции</a>
-                    <a href="company.html">Производители</a>
-                    <a href="sales.html">Акции</a>
-                    <a href="partner.html">Для бизнеса</a>
-                </nav>
-
-                <div class="footer__contacts">
-                    <p class="footer__location">
-                        <img class="icon" src="../site/icons/catalog-location-white.svg" alt="">
-                        г. Абакан, Хакасия
-                    </p>
-
-                    <a class="button button--light" href="index.html#contacts">
-                        Связаться с нами
-                    </a>
-                </div>
+            <div class="sale-card__content">
+              <p class="sale-card__label">С 1 по 15 ноября</p>
+              <h2 class="sale-card__title">Сырная неделя</h2>
+              <p class="sale-card__description">
+                Скидка 15% на все фермерские сыры собственного и регионального
+                производства.
+              </p>
+              <a class="button sale-card__button" href="catalog.html"
+                >Смотреть ассортимент</a
+              >
             </div>
 
-            <div class="footer__bottom">
-                <p>© 2026 Буренка от Solomona. Все права защищены.</p>
-                <p>Натурально. Вкусно. С любовью из Хакасии. ♡</p>
+            <div class="sale-card__badge">
+              <span class="sale-card__discount">−15%</span>
+              <span class="sale-card__badge-text">На все<br />сыры</span>
             </div>
+          </article>
+
+          <!-- Домашние йогурты -->
+          <article class="sale-card">
+            <img
+              class="sale-card__image"
+              src="../site/img/promotions/homemade-yogurt.png"
+              alt="Домашние йогурты с ягодами"
+              loading="lazy"
+            />
+
+            <div class="sale-card__content">
+              <p class="sale-card__label">Новинка</p>
+              <h2 class="sale-card__title">Домашние йогурты</h2>
+              <p class="sale-card__description">
+                Новые вкусы от фермерских хозяйств Хакасии. Натуральный состав,
+                без добавок и консервантов.
+              </p>
+              <a class="button sale-card__button" href="catalog.html"
+                >Смотреть йогурты</a
+              >
+            </div>
+
+            <div class="sale-card__badge sale-card__badge--green">
+              <span class="sale-card__badge-text">Новые<br />вкусы</span>
+            </div>
+          </article>
+
+          <!-- Свежее деревенское молоко -->
+          <article class="sale-card">
+            <img
+              class="sale-card__image"
+              src="../site/img/promotions/fresh-milk.png"
+              alt="Бутылка и стакан свежего молока"
+              loading="lazy"
+            />
+
+            <div class="sale-card__content">
+              <p class="sale-card__label">Сезонное предложение</p>
+              <h2 class="sale-card__title">Свежее деревенское молоко</h2>
+              <p class="sale-card__description">
+                Каждый день в наших магазинах. Натуральное молоко от проверенных
+                фермеров.
+              </p>
+              <a class="button sale-card__button" href="catalog.html"
+                >Подробнее</a
+              >
+            </div>
+
+            <div class="sale-card__badge sale-card__badge--green">
+              <span class="sale-card__badge-text"
+                >Натуральное<br />молоко<br />каждый день</span
+              >
+            </div>
+          </article>
+
+          <!-- Сахалинское масло -->
+          <article class="sale-card">
+            <img
+              class="sale-card__image"
+              src="../site/img/promotions/butter-offer.png"
+              alt="Сливочное масло на деревянной доске"
+              loading="lazy"
+            />
+
+            <div class="sale-card__content">
+              <p class="sale-card__label">До 30 ноября</p>
+              <h2 class="sale-card__title">Сахалинское масло</h2>
+              <p class="sale-card__description">
+                Сливочное масло высшего качества по специальной цене.
+              </p>
+              <a class="button sale-card__button" href="catalog.html"
+                >Смотреть товар</a
+              >
+            </div>
+
+            <div class="sale-card__badge">
+              <span class="sale-card__badge-text">Выгодная<br />цена</span>
+            </div>
+          </article>
+
+          <!-- Семейная корзина -->
+          <article class="sale-card">
+            <img
+              class="sale-card__image"
+              src="../site/img/promotions/family-basket.png"
+              alt="Семейный набор молочных продуктов и яиц"
+              loading="lazy"
+            />
+
+            <div class="sale-card__content">
+              <p class="sale-card__label">Набор недели</p>
+              <h2 class="sale-card__title">Семейная корзина</h2>
+              <p class="sale-card__description">
+                Молоко, творог, сметана, яйца и йогурт по выгодной цене.
+              </p>
+              <a class="button sale-card__button" href="catalog.html"
+                >Смотреть набор</a
+              >
+            </div>
+
+            <div class="sale-card__badge">
+              <span class="sale-card__badge-text"
+                >Полный набор<br />для семьи</span
+              >
+            </div>
+          </article>
+
+          <!-- Фермерский творог -->
+          <article class="sale-card">
+            <img
+              class="sale-card__image"
+              src="../site/img/promotions/farm-curd.png"
+              alt="Фермерский творог в деревянной миске"
+              loading="lazy"
+            />
+
+            <div class="sale-card__content">
+              <p class="sale-card__label">Сезонное</p>
+              <h2 class="sale-card__title">Фермерский творог</h2>
+              <p class="sale-card__description">
+                Традиционный вкус и натуральный состав. Скидка 10% на весь
+                творог.
+              </p>
+              <a class="button sale-card__button" href="catalog.html"
+                >Смотреть творог</a
+              >
+            </div>
+
+            <div class="sale-card__badge">
+              <span class="sale-card__discount">−10%</span>
+              <span class="sale-card__badge-text">На весь<br />творог</span>
+            </div>
+          </article>
         </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <div class="footer__top">
+          <a class="footer__brand" href="index.html">
+            <img class="footer__logo" src="../site/img/logo.png" alt="" />
+            <div>
+              <p class="footer__name">Буренка от Solomona</p>
+              <p class="footer__description">
+                Фермерская молочная продукция<br />
+                из Хакасии и Минусинска
+              </p>
+            </div>
+          </a>
+
+          <nav class="footer__navigation" aria-label="Меню в подвале">
+            <a href="catalog.html">Каталог</a>
+            <a href="index.html#stores">Магазины</a>
+            <a href="about.html">О компании</a>
+            <a href="company.html">Производители</a>
+            <a href="sales.html">Акции</a>
+            <a href="partner.html">Для бизнеса</a>
+          </nav>
+
+          <div class="footer__contacts">
+            <p class="footer__location">
+              <img
+                class="icon"
+                src="../site/icons/catalog-location-white.svg"
+                alt=""
+              />
+              г. Абакан, Хакасия
+            </p>
+
+            <a class="button button--light" href="index.html#contacts">
+              Связаться с нами
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Буренка от Solomona. Все права защищены.</p>
+          <p>Натурально. Вкусно. С любовью из Хакасии. ♡</p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
