@@ -20,7 +20,6 @@
 
           <a class="navigation__link" href="home.html#stores">Магазины</a>
           <a class="navigation__link" href="about.html">О компании</a>
-          <a class="navigation__link" href="company.html">Производители</a>
           <a class="navigation__link" href="sales.html">Акции</a>
           <a
             class="navigation__link navigation__link--active"
@@ -31,15 +30,29 @@
           <a class="navigation__link" href="#contacts">Контакты</a>
         </nav>
 
-        <a class="button header__button" href="home.html#stores">
-          <img
-            class="icon"
-            src="../site/icons/catalog-location-white.svg"
-            alt=""
-          />
-          <span>Найти магазин</span>
-        </a>
+        <div class="header__actions">
+          <a
+            class="button header__cart"
+            href="cart.html"
+            aria-label="Перейти в корзину"
+          >
+            <span class="header__action-icon">
+              <img src="../site/icons/catalog-cart-white.svg" alt="" />
+            </span>
+            <span class="header__cart-text">Корзина</span>
+          </a>
 
+          <a
+            class="button header__button"
+            href="home.html#stores"
+            aria-label="Найти магазин"
+          >
+            <span class="header__action-icon">
+              <img src="../site/icons/catalog-location-white.svg" alt="" />
+            </span>
+            <span>Найти магазин</span>
+          </a>
+        </div>
         <button
           class="header__menu"
           type="button"
@@ -382,7 +395,6 @@
             <a href="catalog.html">Каталог</a>
             <a href="home.html#stores">Магазины</a>
             <a href="about.html">О компании</a>
-            <a href="company.html">Производители</a>
             <a href="sales.html">Акции</a>
             <a href="partner.html">Для бизнеса</a>
           </nav>

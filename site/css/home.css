@@ -86,11 +86,6 @@ button:focus-visible {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
-
-
-
-
-
 }
 
 .visually-hidden {
@@ -212,6 +207,8 @@ button:focus-visible {
   display: flex;
   align-items: center;
   gap: 28px;
+  width: calc(100% - 48px);
+  max-width: none;
   min-height: 78px;
 }
 
@@ -256,6 +253,38 @@ button:focus-visible {
 
 .menu-toggle {
   display: none;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.header__cart {
+  white-space: nowrap;
+}
+
+/* Отступ теперь у всей группы, а не у одной кнопки. */
+.header__actions .header__button {
+  margin-left: 0;
+  margin-right: 0;
+  white-space: nowrap;
+}
+
+.header__action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header__action-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 /* Главный экран */
@@ -772,9 +801,6 @@ button:focus-visible {
   width: 40%;
   height: 40px;
   margin: 8px 0 -2px auto;
-
-
-
 }
 
 .footer__bottom {
@@ -1067,7 +1093,7 @@ button:focus-visible {
   .hero__inner {
     min-height: 480px;
     padding: 46px 0 32px;
-  } 
+  }
   .hero__content {
     width: 82%;
   }
@@ -1244,6 +1270,44 @@ button:focus-visible {
   .footer__bottom {
     flex-direction: column;
     gap: 8px;
+  }
+}
+@media (max-width: 500px) {
+  .header__inner {
+    width: calc(100% - 24px);
+    gap: 8px;
+  }
+
+  .header__actions {
+    gap: 8px;
+  }
+
+  /* Скрываем текст, сохраняя контейнеры иконок. */
+  .header__actions .header__cart-text,
+  .header__actions .header__button > span:not(.header__action-icon) {
+    display: none;
+  }
+
+  .header__actions .header__cart,
+  .header__actions .header__button {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .header__actions .header__action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__actions .header__action-icon img {
+    width: 20px;
+    height: 20px;
   }
 }
 

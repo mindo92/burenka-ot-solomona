@@ -135,6 +135,8 @@ summary:focus-visible {
   display: flex;
   align-items: center;
   gap: 28px;
+  width: calc(100% - 48px);
+  max-width: none;
   min-height: 78px;
 }
 
@@ -201,6 +203,38 @@ summary:focus-visible {
   width: 100%;
   height: 2px;
   background: currentColor;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.header__cart {
+  white-space: nowrap;
+}
+
+/* Отступ теперь у всей группы, а не у одной кнопки. */
+.header__actions .header__button {
+  margin-left: 0;
+  margin-right: 0;
+  white-space: nowrap;
+}
+
+.header__action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header__action-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 /* Главный экран каталога */
@@ -1070,7 +1104,7 @@ summary:focus-visible {
   .categories__list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  
+
   .catalog-hero__content {
     width: 80%;
   }
@@ -1156,6 +1190,42 @@ summary:focus-visible {
 /* Телефоны */
 
 @media (max-width: 500px) {
+  .header__inner {
+    width: calc(100% - 24px);
+    gap: 8px;
+  }
+
+  .header__actions {
+    gap: 8px;
+  }
+
+  /* Скрываем текст, сохраняя контейнеры иконок. */
+  .header__actions .header__cart-text,
+  .header__actions .header__button > span:not(.header__action-icon) {
+    display: none;
+  }
+
+  .header__actions .header__cart,
+  .header__actions .header__button {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .header__actions .header__action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__actions .header__action-icon img {
+    width: 20px;
+    height: 20px;
+  }
   .categories {
     padding: 16px 0;
   }
@@ -1260,13 +1330,6 @@ summary:focus-visible {
 /* Самые узкие экраны */
 
 @media (max-width: 360px) {
-  .header__button {
-    padding: 9px;
-  }
-
-  .header__button span {
-    display: none;
-  }
 
   .filters__form {
     grid-template-columns: minmax(0, 1fr);
