@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Товар — Буренка от Solomona</title>
+        <link rel="stylesheet" href="../site/css/product.css" />
+        <script src="../site/scripts/products.js" defer></script>
+        <script src="../site/scripts/shop.js" defer></script>
+        <script src="../site/scripts/product.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__inner">
+                <a class="header__logo" href="home.html" aria-label="На главную">
+                    <img src="../site/img/logo.png" alt="Буренка от Solomona" />
+                </a>
+                <nav class="navigation" id="navigation" aria-label="Основное меню">
+                    <a
+                        class="navigation__link navigation__link--active"
+                        href="catalog.html"
+                        >Каталог</a
+                    >
+                    <a class="navigation__link" href="home.html#stores">Магазины</a>
+                    <a class="navigation__link" href="about.html">О компании</a>
+                    <a class="navigation__link" href="sales.html">Акции</a>
+                    <a class="navigation__link" href="partner.html">Для бизнеса</a>
+                    <a class="navigation__link" href="#contacts">Контакты</a>
+                </nav>
+                <div class="header__actions">
+                    <a
+                        class="button header__cart"
+                        href="cart.html"
+                        aria-label="Перейти в корзину"
+                    >
+                        <span class="header__action-icon">
+                            <img src="../site/icons/catalog-cart-white.svg" alt="" />
+                        </span>
+                        <span class="header__cart-text">Корзина</span>
+                    </a>
+                    <a
+                        class="button header__button"
+                        href="home.html#stores"
+                        aria-label="Найти магазин"
+                    >
+                        <span class="header__action-icon">
+                            <img
+                                src="../site/icons/catalog-location-white.svg"
+                                alt=""
+                            />
+                        </span>
+                        <span>Найти магазин</span>
+                    </a>
+                </div>
+                <button
+                    class="header__menu"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-controls="navigation"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+        <main class="product-page">
+            <div class="container">
+                <nav class="product-page__breadcrumbs" aria-label="Хлебные крошки">
+                    <a href="home.html">Главная</a><span>/</span
+                    ><a href="catalog.html">Каталог</a><span>/</span
+                    ><span data-field="category"></span><span>/</span
+                    ><span data-field="title" aria-current="page"></span>
+                </nav>
+                <section class="product-page__missing" hidden>
+                    <h1>Товар не найден</h1>
+                    <p>Возможно, ссылка устарела. Выберите товар в каталоге.</p>
+                    <a class="button" href="catalog.html">В каталог</a>
+                </section>
+                <div class="product-page__content">
+                    <!-- Фото и информация о товаре -->
+                    <section
+                        class="product-page__main"
+                        aria-labelledby="product-title"
+                    >
+                        <div class="product-gallery">
+                            <div class="product-gallery__picture">
+                                <img
+                                    class="product-gallery__image"
+                                    src="../site/img/catalog/adyghe.png"
+                                    alt="Сыр Адыгейский"
+                                /><span class="product-gallery__badge"></span
+                                ><button
+                                    class="product-gallery__favorite"
+                                    data-favorite
+                                    type="button"
+                                    aria-label="В избранное"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../site/icons/catalog-heart.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                            <div class="product-gallery__controls">
+                                <button
+                                    class="product-gallery__arrow"
+                                    data-gallery-prev
+                                    type="button"
+                                    aria-label="Предыдущее фото"
+                                >
+                                    ‹
+                                </button>
+                                <div class="product-gallery__thumbnails">
+                                    <button
+                                        class="product-gallery__thumbnail"
+                                        type="button"
+                                        aria-label="Фото 1"
+                                        aria-pressed="false"
+                                    >
+                                        <img
+                                            src="../site/img/catalog/adyghe.png"
+                                            alt=""
+                                        /></button
+                                    ><button
+                                        class="product-gallery__thumbnail"
+                                        type="button"
+                                        aria-label="Фото 2"
+                                        aria-pressed="false"
+                                    >
+                                        <img
+                                            src="../site/img/catalog/adyghe.png"
+                                            alt=""
+                                        /></button
+                                    ><button
+                                        class="product-gallery__thumbnail"
+                                        type="button"
+                                        aria-label="Фото 3"
+                                        aria-pressed="false"
+                                    >
+                                        <img
+                                            src="../site/img/catalog/adyghe.png"
+                                            alt=""
+                                        /></button
+                                    ><button
+                                        class="product-gallery__thumbnail"
+                                        type="button"
+                                        aria-label="Фото 4"
+                                        aria-pressed="false"
+                                    >
+                                        <img
+                                            src="../site/img/catalog/adyghe.png"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                                <button
+                                    class="product-gallery__arrow"
+                                    data-gallery-next
+                                    type="button"
+                                    aria-label="Следующее фото"
+                                >
+                                    ›
+                                </button>
+                            </div>
+                            <p class="product-gallery__caption">
+                                Натурально. Вкусно. С любовью из Хакасии.
+                            </p>
+                        </div>
+                        <div class="product-info">
+                            <h1
+                                class="product-info__title"
+                                id="product-title"
+                                data-field="title"
+                            ></h1>
+                            <p
+                                class="product-info__description"
+                                data-field="description"
+                            ></p>
+                            <div class="product-info__price-line">
+                                <strong
+                                    class="product-info__price"
+                                    data-price
+                                ></strong
+                                ><span data-field="weight"></span
+                                ><span
+                                    class="product-info__stock"
+                                    data-field="stock"
+                                ></span>
+                            </div>
+                            <div class="product-info__details">
+                                <div class="product-info__detail">
+                                    <span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/catalog-farmer.svg"
+                                            alt=""
+                                    /></span>
+                                    <div>
+                                        <span>Производитель</span>
+                                        <p data-field="brand"></p>
+                                    </div>
+                                </div>
+                                <div class="product-info__detail">
+                                    <span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/home-mountain.svg"
+                                            alt=""
+                                    /></span>
+                                    <div>
+                                        <span>Регион</span>
+                                        <p data-field="region"></p>
+                                    </div>
+                                </div>
+                                <div class="product-info__detail">
+                                    <span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/home-document-dark.svg"
+                                            alt=""
+                                    /></span>
+                                    <div>
+                                        <span>Категория</span>
+                                        <p data-field="category"></p>
+                                    </div>
+                                </div>
+                                <div class="product-info__detail">
+                                    <span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/home-document.svg"
+                                            alt=""
+                                    /></span>
+                                    <div>
+                                        <span>Срок хранения</span>
+                                        <p data-field="shelfLife"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info__labels">
+                                <span
+                                    ><span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/catalog-leaf.svg"
+                                            alt="" /></span
+                                    >Натуральный продукт</span
+                                ><span
+                                    ><span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/catalog-farmer.svg"
+                                            alt="" /></span
+                                    >От местных фермеров</span
+                                ><span
+                                    ><span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/catalog-truck.svg"
+                                            alt="" /></span
+                                    >Свежие поставки</span
+                                >
+                            </div>
+                            <div class="product-info__actions">
+                                <div
+                                    class="product-quantity"
+                                    role="group"
+                                    aria-label="Количество товара"
+                                >
+                                    <button
+                                        class="product-quantity__button"
+                                        data-quantity-minus
+                                        type="button"
+                                        aria-label="Уменьшить количество"
+                                    >
+                                        −</button
+                                    ><output
+                                        class="product-quantity__value"
+                                        id="product-quantity"
+                                        >1</output
+                                    ><button
+                                        class="product-quantity__button"
+                                        data-quantity-plus
+                                        type="button"
+                                        aria-label="Увеличить количество"
+                                    >
+                                        +
+                                    </button>
+                                </div>
+                                <button
+                                    class="button product-info__add"
+                                    type="button"
+                                >
+                                    <span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/catalog-cart-white.svg"
+                                            alt="" /></span
+                                    >В корзину</button
+                                ><button
+                                    class="product-info__favorite"
+                                    data-favorite
+                                    type="button"
+                                    aria-label="В избранное"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../site/icons/catalog-heart.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                            <a class="product-info__shops" href="#product-stores"
+                                ><span class="product-info__icon"
+                                    ><img
+                                        src="../site/icons/home-shop.svg"
+                                        alt="" /></span
+                                >Найти в магазинах</a
+                            >
+                        </div>
+                    </section>
+                    <p
+                        class="product-page__message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                    <!-- Преимущества -->
+                    <section class="product-benefits" aria-label="Преимущества">
+                        <div class="product-benefits__item">
+                            <span class="product-benefits__icon"
+                                ><img src="../site/icons/catalog-leaf.svg" alt=""
+                            /></span>
+                            <div>
+                                <h3>Натуральный состав</h3>
+                                <p>Без искусственных добавок</p>
+                            </div>
+                        </div>
+                        <div class="product-benefits__item">
+                            <span class="product-benefits__icon"
+                                ><img src="../site/icons/catalog-farmer.svg" alt=""
+                            /></span>
+                            <div>
+                                <h3>Местные фермеры</h3>
+                                <p>Хакасия и Минусинский район</p>
+                            </div>
+                        </div>
+                        <div class="product-benefits__item">
+                            <span class="product-benefits__icon"
+                                ><img src="../site/icons/catalog-truck.svg" alt=""
+                            /></span>
+                            <div>
+                                <h3>Свежая поставка</h3>
+                                <p>Регулярное пополнение</p>
+                            </div>
+                        </div>
+                        <div class="product-benefits__item">
+                            <span class="product-benefits__icon"
+                                ><img src="../site/icons/catalog-heart.svg" alt=""
+                            /></span>
+                            <div>
+                                <h3>Настоящий вкус</h3>
+                                <p>С заботой о качестве</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Описание товара и характеристики -->
+                    <section class="product-details">
+                        <div
+                            class="product-details__tabs"
+                            role="tablist"
+                            aria-label="Информация о товаре"
+                        >
+                            <button
+                                class="product-details__tab"
+                                id="tab-description"
+                                type="button"
+                                role="tab"
+                                aria-controls="panel-description"
+                                aria-selected="true"
+                                tabindex="0"
+                            >
+                                Описание</button
+                            ><button
+                                class="product-details__tab"
+                                id="tab-composition"
+                                type="button"
+                                role="tab"
+                                aria-controls="panel-composition"
+                                aria-selected="false"
+                                tabindex="-1"
+                            >
+                                Состав</button
+                            ><button
+                                class="product-details__tab"
+                                id="tab-nutrition"
+                                type="button"
+                                role="tab"
+                                aria-controls="panel-nutrition"
+                                aria-selected="false"
+                                tabindex="-1"
+                            >
+                                Пищевая ценность</button
+                            ><button
+                                class="product-details__tab"
+                                id="tab-storage"
+                                type="button"
+                                role="tab"
+                                aria-controls="panel-storage"
+                                aria-selected="false"
+                                tabindex="-1"
+                            >
+                                Условия хранения
+                            </button>
+                        </div>
+                        <div
+                            class="product-details__panel"
+                            id="panel-description"
+                            role="tabpanel"
+                            aria-labelledby="tab-description"
+                        >
+                            <div class="product-details__columns">
+                                <div>
+                                    <h2 data-field="title"></h2>
+                                    <p data-long-description></p>
+                                    <p>
+                                        Информацию о продукте и рекомендации по
+                                        употреблению уточняйте на упаковке.
+                                    </p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h3>Состав</h3>
+                                        <p data-field="composition"></p>
+                                    </div>
+                                    <div class="product-details__nutrition">
+                                        <h3>Пищевая ценность на 100 г</h3>
+                                        <table class="product-details__table">
+                                            <tbody data-nutrition></tbody>
+                                        </table>
+                                        <p data-nutrition-empty hidden>
+                                            Информация уточняется. Смотрите упаковку
+                                            товара.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h3>Условия хранения</h3>
+                                        <p data-field="storage"></p>
+                                    </div>
+                                    <img
+                                        class="product-details__photo"
+                                        src="../site/img/catalog/adyghe.png"
+                                        alt=""
+                                        loading="lazy"
+                                        data-detail-photo
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="product-details__panel"
+                            id="panel-composition"
+                            role="tabpanel"
+                            aria-labelledby="tab-composition"
+                            hidden
+                        >
+                            <div>
+                                <h3>Состав</h3>
+                                <p data-field="composition"></p>
+                            </div>
+                        </div>
+                        <div
+                            class="product-details__panel"
+                            id="panel-nutrition"
+                            role="tabpanel"
+                            aria-labelledby="tab-nutrition"
+                            hidden
+                        >
+                            <div class="product-details__nutrition">
+                                <h3>Пищевая ценность на 100 г</h3>
+                                <table class="product-details__table">
+                                    <tbody data-nutrition></tbody>
+                                </table>
+                                <p data-nutrition-empty hidden>
+                                    Информация уточняется. Смотрите упаковку товара.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="product-details__panel"
+                            id="panel-storage"
+                            role="tabpanel"
+                            aria-labelledby="tab-storage"
+                            hidden
+                        >
+                            <div>
+                                <h3>Условия хранения</h3>
+                                <p data-field="storage"></p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Магазины -->
+                    <section class="product-shops" id="product-stores">
+                        <div class="product-page__section-heading">
+                            <h2>Где купить?</h2>
+                            <a href="home.html#stores">Все магазины →</a>
+                        </div>
+                        <p class="product-shops__note">
+                            Наличие выбранного товара уточняйте в магазине.
+                        </p>
+                        <div class="product-shops__grid">
+                            <article class="product-shops__card">
+                                <img
+                                    src="../site/img/store-1.png"
+                                    alt="Магазин ТК «Аллея»"
+                                    loading="lazy"
+                                />
+                                <div>
+                                    <h3>ТК «Аллея»</h3>
+                                    <p>г. Абакан, ул. Кирова, 112</p>
+                                    <p>Ежедневно: 09:00–21:00</p>
+                                    <a href="home.html#stores"
+                                        >Подробнее о магазине →</a
+                                    >
+                                </div>
+                            </article>
+                            <article class="product-shops__card">
+                                <img
+                                    src="../site/img/store-2.png"
+                                    alt="Магазин ТК «РолБи»"
+                                    loading="lazy"
+                                />
+                                <div>
+                                    <h3>ТК «РолБи»</h3>
+                                    <p>г. Абакан, ул. Некрасова, 31</p>
+                                    <p>Ежедневно: 09:00–21:00</p>
+                                    <a href="home.html#stores"
+                                        >Подробнее о магазине →</a
+                                    >
+                                </div>
+                            </article>
+                            <article class="product-shops__card">
+                                <img
+                                    src="../site/img/store-3.png"
+                                    alt="Магазин ТК «Владимирский»"
+                                    loading="lazy"
+                                />
+                                <div>
+                                    <h3>ТК «Владимирский»</h3>
+                                    <p>г. Абакан, ул. Крылова, 85</p>
+                                    <p>Ежедневно: 09:00–21:00</p>
+                                    <a href="home.html#stores"
+                                        >Подробнее о магазине →</a
+                                    >
+                                </div>
+                            </article>
+                            <a class="product-shops__map" href="home.html#stores"
+                                ><span class="product-shops__map-icon"
+                                    ><img
+                                        src="../site/icons/home-pin.svg"
+                                        alt="" /></span
+                                ><strong>Магазины на карте</strong
+                                ><span
+                                    >Посмотреть адреса и выбрать ближайший →</span
+                                ></a
+                            >
+                        </div>
+                    </section>
+                    <!-- О фермерской продукции -->
+                    <section class="product-origin">
+                        <img
+                            class="product-origin__photo"
+                            src="../site/img/farm.png"
+                            alt="Фермерская молочная продукция на фоне пастбища"
+                            loading="lazy"
+                        />
+                        <div class="product-origin__content">
+                            <h2>Откуда этот продукт?</h2>
+                            <p>
+                                Мы объединяем местных фермеров и помогаем их
+                                продукции оказаться на вашем столе.
+                            </p>
+                            <p>
+                                <strong data-field="brand"></strong><br /><span
+                                    data-field="region"
+                                ></span>
+                            </p>
+                            <div class="product-origin__features">
+                                <span
+                                    ><span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/home-mountain.svg"
+                                            alt="" /></span
+                                    >Местные хозяйства</span
+                                ><span
+                                    ><span class="product-info__icon"
+                                        ><img
+                                            src="../site/icons/home-heart.svg"
+                                            alt="" /></span
+                                    >С заботой о качестве</span
+                                >
+                            </div>
+                            <a class="button" href="about.html">О компании →</a>
+                        </div>
+                    </section>
+                    <!-- Другие товары -->
+                    <section class="product-related">
+                        <div class="product-page__section-heading">
+                            <h2>Вам может понравиться</h2>
+                            <a href="catalog.html">В каталог →</a>
+                        </div>
+                        <div class="product-related__grid">
+                            <article class="product-related__card" data-related>
+                                <div class="product-related__picture">
+                                    <a
+                                        class="product-related__link"
+                                        href="catalog.html"
+                                        ><img
+                                            class="product-related__image"
+                                            src="../site/img/cheese.png"
+                                            alt=""
+                                            loading="lazy"
+                                    /></a>
+                                    <button
+                                        class="product-related__favorite"
+                                        type="button"
+                                        aria-label="В избранное"
+                                        aria-pressed="false"
+                                    >
+                                        <img
+                                            src="../site/icons/catalog-heart.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                                <div class="product-related__body">
+                                    <h3>
+                                        <a
+                                            class="product-related__title"
+                                            href="catalog.html"
+                                        ></a>
+                                    </h3>
+                                    <p class="product-related__description"></p>
+                                    <p class="product-related__brand"></p>
+                                    <div class="product-related__bottom">
+                                        <div>
+                                            <strong
+                                                class="product-related__price"
+                                            ></strong>
+                                            <p class="product-related__weight"></p>
+                                        </div>
+                                        <button
+                                            class="button product-related__add"
+                                            type="button"
+                                            aria-label="Добавить в корзину"
+                                        >
+                                            <span class="product-related__icon"
+                                                ><img
+                                                    src="../site/icons/catalog-cart-white.svg"
+                                                    alt=""
+                                            /></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product-related__card" data-related>
+                                <div class="product-related__picture">
+                                    <a
+                                        class="product-related__link"
+                                        href="catalog.html"
+                                        ><img
+                                            class="product-related__image"
+                                            src="../site/img/cheese.png"
+                                            alt=""
+                                            loading="lazy"
+                                    /></a>
+                                    <button
+                                        class="product-related__favorite"
+                                        type="button"
+                                        aria-label="В избранное"
+                                        aria-pressed="false"
+                                    >
+                                        <img
+                                            src="../site/icons/catalog-heart.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                                <div class="product-related__body">
+                                    <h3>
+                                        <a
+                                            class="product-related__title"
+                                            href="catalog.html"
+                                        ></a>
+                                    </h3>
+                                    <p class="product-related__description"></p>
+                                    <p class="product-related__brand"></p>
+                                    <div class="product-related__bottom">
+                                        <div>
+                                            <strong
+                                                class="product-related__price"
+                                            ></strong>
+                                            <p class="product-related__weight"></p>
+                                        </div>
+                                        <button
+                                            class="button product-related__add"
+                                            type="button"
+                                            aria-label="Добавить в корзину"
+                                        >
+                                            <span class="product-related__icon"
+                                                ><img
+                                                    src="../site/icons/catalog-cart-white.svg"
+                                                    alt=""
+                                            /></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product-related__card" data-related>
+                                <div class="product-related__picture">
+                                    <a
+                                        class="product-related__link"
+                                        href="catalog.html"
+                                        ><img
+                                            class="product-related__image"
+                                            src="../site/img/cheese.png"
+                                            alt=""
+                                            loading="lazy"
+                                    /></a>
+                                    <button
+                                        class="product-related__favorite"
+                                        type="button"
+                                        aria-label="В избранное"
+                                        aria-pressed="false"
+                                    >
+                                        <img
+                                            src="../site/icons/catalog-heart.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                                <div class="product-related__body">
+                                    <h3>
+                                        <a
+                                            class="product-related__title"
+                                            href="catalog.html"
+                                        ></a>
+                                    </h3>
+                                    <p class="product-related__description"></p>
+                                    <p class="product-related__brand"></p>
+                                    <div class="product-related__bottom">
+                                        <div>
+                                            <strong
+                                                class="product-related__price"
+                                            ></strong>
+                                            <p class="product-related__weight"></p>
+                                        </div>
+                                        <button
+                                            class="button product-related__add"
+                                            type="button"
+                                            aria-label="Добавить в корзину"
+                                        >
+                                            <span class="product-related__icon"
+                                                ><img
+                                                    src="../site/icons/catalog-cart-white.svg"
+                                                    alt=""
+                                            /></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product-related__card" data-related>
+                                <div class="product-related__picture">
+                                    <a
+                                        class="product-related__link"
+                                        href="catalog.html"
+                                        ><img
+                                            class="product-related__image"
+                                            src="../site/img/cheese.png"
+                                            alt=""
+                                            loading="lazy"
+                                    /></a>
+                                    <button
+                                        class="product-related__favorite"
+                                        type="button"
+                                        aria-label="В избранное"
+                                        aria-pressed="false"
+                                    >
+                                        <img
+                                            src="../site/icons/catalog-heart.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                                <div class="product-related__body">
+                                    <h3>
+                                        <a
+                                            class="product-related__title"
+                                            href="catalog.html"
+                                        ></a>
+                                    </h3>
+                                    <p class="product-related__description"></p>
+                                    <p class="product-related__brand"></p>
+                                    <div class="product-related__bottom">
+                                        <div>
+                                            <strong
+                                                class="product-related__price"
+                                            ></strong>
+                                            <p class="product-related__weight"></p>
+                                        </div>
+                                        <button
+                                            class="button product-related__add"
+                                            type="button"
+                                            aria-label="Добавить в корзину"
+                                        >
+                                            <span class="product-related__icon"
+                                                ><img
+                                                    src="../site/icons/catalog-cart-white.svg"
+                                                    alt=""
+                                            /></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="product-find">
+                        <div>
+                            <h2>Найдите ближайший магазин</h2>
+                            <p>Фермерская молочная продукция рядом с вами.</p>
+                            <a class="button" href="home.html#stores"
+                                >Посмотреть все магазины →</a
+                            >
+                        </div>
+                        <img
+                            src="../site/img/store-1.png"
+                            alt="Магазин Буренка от Solomona"
+                            loading="lazy"
+                        />
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="footer" id="contacts">
+            <div class="container">
+                <div class="footer__top">
+                    <a class="footer__brand" href="home.html">
+                        <img
+                            class="footer__logo"
+                            src="../site/img/logo.png"
+                            alt=""
+                        />
+                        <div>
+                            <p class="footer__name">Буренка от Solomona</p>
+                            <p class="footer__description">
+                                Фермерская молочная продукция<br />
+                                из Хакасии и Минусинска
+                            </p>
+                        </div>
+                    </a>
+                    <nav class="footer__navigation" aria-label="Меню в подвале">
+                        <a href="catalog.html">Каталог</a>
+                        <a href="home.html#stores">Магазины</a>
+                        <a href="about.html">О компании</a>
+                        <a href="sales.html">Акции</a>
+                        <a href="partner.html">Для бизнеса</a>
+                    </nav>
+                    <div class="footer__contacts">
+                        <p class="footer__location">
+                            <img
+                                class="icon"
+                                src="../site/icons/catalog-location-white.svg"
+                                alt=""
+                            />
+                            г. Абакан, Хакасия
+                        </p>
+                        <a class="button button--light" href="home.html#contacts">
+                            Связаться с нами
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2026 Буренка от Solomona. Все права защищены.</p>
+                    <p>Натурально. Вкусно. С любовью из Хакасии. ♡</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

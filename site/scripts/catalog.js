@@ -13,10 +13,7 @@ menuButton.addEventListener("click", function () {
     const isOpen = navigation.classList.toggle("navigation--open");
 
     menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Закрыть меню" : "Открыть меню"
-    );
+    menuButton.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
 });
 
 navigation.addEventListener("click", function (event) {
@@ -37,7 +34,6 @@ window.addEventListener("resize", function () {
     }
 });
 
-
 /* Поиск и фильтры */
 
 const filtersForm = document.querySelector("#filters-form");
@@ -47,13 +43,9 @@ const productGrid = document.querySelector("#product-grid");
 const emptyMessage = document.querySelector("#catalog-empty");
 const catalogMessage = document.querySelector("#catalog-message");
 
-const productCards = Array.from(
-    document.querySelectorAll(".product-card")
-);
+const productCards = Array.from(document.querySelectorAll(".product-card"));
 
-const categoryButtons = document.querySelectorAll(
-    ".categories__button"
-);
+const categoryButtons = document.querySelectorAll(".categories__button");
 
 // Сохраняем исходный порядок карточек для сортировки по популярности.
 productCards.forEach(function (card, index) {
@@ -62,7 +54,7 @@ productCards.forEach(function (card, index) {
 
 function getSelectedValues(name) {
     const checkedInputs = filtersForm.querySelectorAll(
-        `input[name="${name}"]:checked`
+        `input[name="${name}"]:checked`,
     );
 
     return Array.from(checkedInputs).map(function (input) {
@@ -71,24 +63,16 @@ function getSelectedValues(name) {
 }
 
 function matchesGroup(selectedValues, productValue) {
-    return (
-        selectedValues.includes("all") ||
-        selectedValues.includes(productValue)
-    );
+    return selectedValues.includes("all") || selectedValues.includes(productValue);
 }
 
 function updateCategoryButtons() {
     const selectedCategories = getSelectedValues("category");
 
     categoryButtons.forEach(function (button) {
-        const isActive = selectedCategories.includes(
-            button.dataset.category
-        );
+        const isActive = selectedCategories.includes(button.dataset.category);
 
-        button.classList.toggle(
-            "categories__button--active",
-            isActive
-        );
+        button.classList.toggle("categories__button--active", isActive);
 
         button.setAttribute("aria-pressed", String(isActive));
     });
@@ -105,25 +89,16 @@ function filterProducts() {
     let visibleCount = 0;
 
     productCards.forEach(function (card) {
-        const title = card.querySelector(
-            ".product-card__title"
-        ).textContent.toLowerCase();
+        const title = card
+            .querySelector(".product-card__title")
+            .textContent.toLowerCase();
 
         const productFeatures = card.dataset.features.split(" ");
 
         const matchesSearch = title.includes(searchText);
-        const matchesCategory = matchesGroup(
-            categories,
-            card.dataset.category
-        );
-        const matchesProducer = matchesGroup(
-            producers,
-            card.dataset.producer
-        );
-        const matchesType = matchesGroup(
-            types,
-            card.dataset.type
-        );
+        const matchesCategory = matchesGroup(categories, card.dataset.category);
+        const matchesProducer = matchesGroup(producers, card.dataset.producer);
+        const matchesType = matchesGroup(types, card.dataset.type);
 
         // Товар должен соответствовать всем выбранным особенностям.
         const matchesFeatures = features.every(function (feature) {
@@ -163,9 +138,7 @@ filtersForm.addEventListener("change", function (event) {
     }
 
     const groupInputs = Array.from(
-        filtersForm.querySelectorAll(
-            `input[name="${changedInput.name}"]`
-        )
+        filtersForm.querySelectorAll(`input[name="${changedInput.name}"]`),
     );
 
     const allInput = groupInputs.find(function (input) {
@@ -195,18 +168,17 @@ categoryButtons.forEach(function (button) {
     button.addEventListener("click", function () {
         const selectedCategory = button.dataset.category;
 
-        filtersForm.querySelectorAll(
-            'input[name="category"]'
-        ).forEach(function (input) {
-            input.checked = input.value === selectedCategory;
-        });
+        filtersForm
+            .querySelectorAll('input[name="category"]')
+            .forEach(function (input) {
+                input.checked = input.value === selectedCategory;
+            });
 
         filterProducts();
     });
 });
 
 searchInput.addEventListener("input", filterProducts);
-
 
 /* Сортировка */
 
@@ -215,29 +187,30 @@ function sortProducts() {
 
     sortedCards.sort(function (firstCard, secondCard) {
         if (sortSelect.value === "price-up") {
-            return Number(firstCard.dataset.price) -
-                Number(secondCard.dataset.price);
+            return (
+                Number(firstCard.dataset.price) - Number(secondCard.dataset.price)
+            );
         }
 
         if (sortSelect.value === "price-down") {
-            return Number(secondCard.dataset.price) -
-                Number(firstCard.dataset.price);
+            return (
+                Number(secondCard.dataset.price) - Number(firstCard.dataset.price)
+            );
         }
 
         if (sortSelect.value === "name") {
             const firstTitle = firstCard.querySelector(
-                ".product-card__title"
+                ".product-card__title",
             ).textContent;
 
             const secondTitle = secondCard.querySelector(
-                ".product-card__title"
+                ".product-card__title",
             ).textContent;
 
             return firstTitle.localeCompare(secondTitle, "ru");
         }
 
-        return Number(firstCard.dataset.order) -
-            Number(secondCard.dataset.order);
+        return Number(firstCard.dataset.order) - Number(secondCard.dataset.order);
     });
 
     sortedCards.forEach(function (card) {
@@ -259,103 +232,48 @@ filtersForm.addEventListener("reset", function () {
     }, 0);
 });
 
-
-/* Избранное и корзина */
-
-// Пока храним данные в браузере.
-// Позже страница корзины сможет использовать эти же данные.
-
-function readSavedData(key, defaultValue) {
-    try {
-        const savedData = localStorage.getItem(key);
-
-        return savedData ? JSON.parse(savedData) : defaultValue;
-    } catch {
-        return defaultValue;
-    }
-}
-
-function saveData(key, value) {
-    try {
-        localStorage.setItem(key, JSON.stringify(value));
-    } catch {
-        catalogMessage.textContent =
-            "Браузер не позволил сохранить данные после закрытия страницы.";
-    }
-}
-
-const savedFavorites = readSavedData("dairy-favorites", []);
-const savedCart = readSavedData("dairy-cart", {});
-
-let favorites = Array.isArray(savedFavorites) ? savedFavorites : [];
-
-const cart =
-    savedCart &&
-    typeof savedCart === "object" &&
-    !Array.isArray(savedCart)
-        ? savedCart
-        : {};
+/* Избранное и корзина: общее хранение со страницей товара. */
 
 productCards.forEach(function (card) {
     const productId = card.dataset.id;
-
-    const productTitle = card.querySelector(
-        ".product-card__title"
-    ).textContent;
-
-    const favoriteButton = card.querySelector(
-        ".product-card__favorite"
-    );
-
-    const cartButton = card.querySelector(
-        ".product-card__cart"
-    );
+    const productTitle = card
+        .querySelector(".product-card__title")
+        .textContent.trim();
+    const favoriteButton = card.querySelector(".product-card__favorite");
+    const cartButton = card.querySelector(".product-card__cart");
 
     function updateFavoriteButton() {
-        const isFavorite = favorites.includes(productId);
-
-        favoriteButton.querySelector("img").src = isFavorite
+        const active = shop.isFavorite(productId);
+        favoriteButton.querySelector("img").src = active
             ? "../site/icons/catalog-heart-active.svg"
             : "../site/icons/catalog-heart-white.svg";
-
-        favoriteButton.classList.toggle(
-            "product-card__favorite--active",
-            isFavorite
-        );
-
-        favoriteButton.setAttribute(
-            "aria-pressed",
-            String(isFavorite)
-        );
-
+        favoriteButton.classList.toggle("product-card__favorite--active", active);
+        favoriteButton.setAttribute("aria-pressed", String(active));
         favoriteButton.setAttribute(
             "aria-label",
-            `${isFavorite ? "Убрать из избранного" : "В избранное"}: ${productTitle}`
+            (active ? "Убрать из избранного: " : "В избранное: ") + productTitle,
         );
     }
 
     updateFavoriteButton();
-
     favoriteButton.addEventListener("click", function () {
-        if (favorites.includes(productId)) {
-            favorites = favorites.filter(function (id) {
-                return id !== productId;
-            });
-        } else {
-            favorites.push(productId);
+        if (!shop.toggleFavorite(productId)) {
+            catalogMessage.textContent =
+                "Не удалось сохранить избранное в браузере.";
         }
-
         updateFavoriteButton();
-        saveData("dairy-favorites", favorites);
     });
-
     cartButton.addEventListener("click", function () {
-        cart[productId] = (Number(cart[productId]) || 0) + 1;
-
-        catalogMessage.textContent =
-            `${productTitle} добавлен в корзину. Количество: ${cart[productId]}.`;
-
-        saveData("dairy-cart", cart);
+        const saved = shop.addToCart(productId, 1);
+        const item = shop.getCart().find(function (item) {
+            return item.id === productId;
+        });
+        catalogMessage.textContent = saved
+            ? productTitle +
+              " добавлен в корзину. Количество: " +
+              item.quantity +
+              "."
+            : "Браузер не позволил сохранить корзину.";
     });
 });
 
